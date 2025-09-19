@@ -35,12 +35,12 @@
 
 /obj/item/shield
 	name = "shield"
-	//~65% block at 100 rob while manually blocking
+	//~65% block at 100 rob while raised
 	//floor for block chance
 	var/base_block_chance = 25
 	//additional blocking chance, scaled proportunately to Robustness
 	var/shield_difficulty = 55
-	//% increase to the final block chance of a shield while it's being used to manually block attacks
+	//% increase to the final block chance of a shield while it's raised
 	var/blocking_multiplier = 1.25
 	//duration of slowdown inflicted on a bashed mob
 	var/slowdown_time = 1
@@ -64,13 +64,13 @@
 	if(!user.blocking)
 		switch(blocking_multiplier)
 			if(1.1 to 1.5)
-				extra_description += span_notice("<br>Manually blocking will increase this shield's performance.")
+				extra_description += span_notice("<br>You can raise your guard to increase this shield's performance.")
 			if(1.6 to 2.5)
-				extra_description += span_warning("<br>You must manually block with this shield to use it effectively.")
+				extra_description += span_warning("<br>You need to raise this shield to use it effectively.")
 			if(2.6 to 3)
-				extra_description += span_warning("<br>This shield is almost impossible to use without manually blocking.")
+				extra_description += span_warning("<br>Whew... This shield is almost impossible to use when not raised!")
 	else
-		extra_description += span_notice("<br>You are focusing on blocking with this shield, making it more effective.")
+		extra_description += span_notice("<br>You have raised this shield and are focusing on blocking attacks.")
 	..(user, extra_description)
 
 /obj/item/shield/proc/get_wielder_skill(mob/user, stat_type)
@@ -228,7 +228,7 @@
 	origin_tech = list(TECH_MATERIAL = 2)
 	matter = list(MATERIAL_GLASS = 10, MATERIAL_STEEL = 10, MATERIAL_PLASTEEL = 15)
 	price_tag = 500
-	//~80% block at 100 rob while manually blocking
+	//~80% block at 100 rob while raised
 	base_block_chance = 15
 	shield_difficulty = 35
 	blocking_multiplier = 2.5
@@ -329,7 +329,7 @@
 	origin_tech = list()
 	matter = list(MATERIAL_GLASS = 20, MATERIAL_STEEL = 20, MATERIAL_PLASTEEL = 10)
 	price_tag = 200
-	//~82% block at 100 rob while manually blocking
+	//~82% block at 100 rob while raised
 	base_block_chance = 5
 	shield_difficulty = 45
 	blocking_multiplier = 3
@@ -438,7 +438,7 @@
 	throw_speed = 2
 	throw_range = 6
 	matter = list(MATERIAL_STEEL = 6)
-	//~65% block chance at 100 rob while manually blocking
+	//~65% block chance at 100 rob while raised
 	base_block_chance = 15
 	shield_difficulty = 74
 	shield_integrity = 170
@@ -459,7 +459,7 @@
 	throw_range = 4
 	matter = list(MATERIAL_STEEL = 4)
 
-	//~70% block rate at 100 rob while manually blocking
+	//~70% block rate at 100 rob while raised
 	//poorer than other riot shields but low stat requirements
 	base_block_chance = 23
 	shield_difficulty = 10

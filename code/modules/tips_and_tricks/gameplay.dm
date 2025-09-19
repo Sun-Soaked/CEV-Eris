@@ -54,7 +54,7 @@
     tipText = "You do not have to cover yourself from ears to toes to look stylish - not wearing anything on your head, eyes, gloves or back looks cool enough."
 
 /tipsAndTricks/gameplay/riotshield
-    tipText = "Riot shields only provide full protection when you manually block."
+    tipText = "Riot shields only provide full protection when you raise them."
 
 /tipsAndTricks/gameplay/buckler
     tipText = "Bucklers are less encumbering than riot shields, but need higher stats to use effectively."
