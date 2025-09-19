@@ -1586,16 +1586,12 @@ var/list/rank_prefix = list(\
 		blocking_item = get_active_held_item()
 
 	SEND_SIGNAL(src, COMSIG_HUMAN_START_BLOCKING)
-	// //nessecary to prevent exploiting the special shield block state after dropping it
-	// if(blocking_item)
-	// 	RegisterSignal(blocking_item, COMSIG_ITEM_DROPPED, TYPE_PROC_REF(stop_blocking))
 	return
 
 /mob/living/carbon/human/proc/stop_blocking()
 	if(!blocking)//already blockingn't with an item somehow?
 		return
 	blocking = FALSE
-	// UnregisterSignal(blocking_item, COMSIG_ITEM_DROPPED)
 	blocking_item = null
 	visible_message(span_notice("[src] lowers \his guard."))
 	if(HUDneed.Find("block"))
