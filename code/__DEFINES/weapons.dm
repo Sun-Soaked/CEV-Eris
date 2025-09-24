@@ -21,6 +21,14 @@
 #define ARMOR_PEN_MASSIVE			3
 #define ARMOR_PEN_MAX				10
 
+//Defines for max bonus penetraton given to daggers & spears
+//reaches half value at around 100 ROB, diminishing returns.
+//For instance, 4 with 100 ROB causes end pen value to be multiplied by 2
+
+#define ARMOR_PEN_BONUS_SMALL		2.5
+#define ARMOR_PEN_BONUS_MODERATE	3
+#define ARMOR_PEN_BONUS_LARGE       4
+
 //Wounding Multiplier: Increases damage taken, applied after armor.
 
 #define WOUNDING_TRIVIAL			0.1

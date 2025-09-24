@@ -141,6 +141,10 @@
 
 	var/chameleon_type
 
+	/// if enabled, this item gets it's armor divisor multiplied based on the wielder's ROB
+	var/bonus_scaling_penetration = FALSE
+	/// if enabled, this item gets additional crit effect chance based on the wielder's ROB
+	var/bonus_scaling_crit = FALSE
 
 /obj/item/Initialize()
 	if(islist(armor))

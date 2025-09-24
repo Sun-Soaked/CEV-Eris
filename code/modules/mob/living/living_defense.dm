@@ -268,8 +268,17 @@
 //	if(HULK in user.mutations)
 //		effective_force *= 2
 
+
+
+	var/adjusted_armor_divisor
+	//if item has scaling penetration enabled, amplifies armor penetration based on wielder's ROB stat
+	if(I.bonus_scaling_penetration)
+		adjusted_armor_divisor = I.armor_divisor * (1 + stats?.getStat(STAT_ROB)/150)
+	else
+		adjusted_armor_divisor = I.armor_divisor
+
 	//Apply weapon damage
-	if (damage_through_armor(effective_force, I.damtype, hit_zone, ARMOR_MELEE, I.armor_divisor, used_weapon = I, sharp = is_sharp(I), edge = has_edge(I)))
+	if (damage_through_armor(effective_force, I.damtype, hit_zone, ARMOR_MELEE, adjusted_armor_divisor, used_weapon = I, sharp = is_sharp(I), edge = has_edge(I)))
 		return TRUE
 	else
 		return FALSE
