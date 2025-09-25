@@ -402,7 +402,7 @@
 	//The we handle the doafter for the tool usage
 	if(time_to_finish)
 
-		if(!do_after(user, time_to_finish, target))
+		if(!do_after(user, time_to_finish, target, unique = TRUE))
 			//If the doafter fails
 			to_chat(user, span_warning("You need to stand still to finish the task properly!"))
 			time_spent = world.time - start_time //We failed, spent only part of the time working
