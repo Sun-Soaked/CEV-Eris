@@ -136,7 +136,7 @@
 		return TRUE
 	return FALSE
 
-//determines the chance of blocking attacks based on shield stats & blocking state
+/// determines the chance of blocking attacks based on shield stats & blocking state
 /obj/item/shield/proc/get_block_chance(mob/user)
 	if(user.blocking && user.blocking_item == src)
 		return blocking_multiplier *(shield_difficulty/(1+100/get_wielder_skill(user,STAT_ROB))+base_block_chance)
