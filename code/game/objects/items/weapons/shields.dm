@@ -35,16 +35,15 @@
 
 /obj/item/shield
 	name = "shield"
-	//~65% block at 100 rob while raised
-	//floor for block chance
-	var/base_block_chance = 25
-	//additional blocking chance, scaled proportunately to Robustness
+	/// floor for block chance
+	var/base_block_chance = 25 // ~65% block at 100 rob while raised
+	/// additional blocking chance, scaled proportunately to Robustness
 	var/shield_difficulty = 55
-	//% increase to the final block chance of a shield while it's raised
+	/// % increase to the final block chance of a shield while it's raised
 	var/blocking_multiplier = 1.25
-	//duration of slowdown inflicted on a bashed mob
+	/// duration of slowdown inflicted on a bashed mob
 	var/slowdown_time = 1
-	//determines how much of a penetrating projectile's damage is lost. see bullets.dm, beams.dm, & plasma.dm
+	/// determines how much of a penetrating projectile's damage is lost. see bullets.dm, beams.dm, & plasma.dm
 	var/shield_integrity = 100
 	slowdown_blocking = SHIELD_BLOCKING_SLOWDOWN
 	style = STYLE_NEG_HIGH
