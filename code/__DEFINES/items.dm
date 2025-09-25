@@ -178,9 +178,9 @@
 					/obj/item/storage/deferred/crate/german_uniform = 4)
 
 //Double Tact Defines
-//Windup duration at rob stat level 0
+/// Windup duration at rob stat level 0
 #define BASE_TACT_DURATION 1 SECONDS
-//Hard floor for improved windup duration
+/// Hard floor for improved windup duration
 #define MIN_TACT_DURATION 0.3 SECONDS
 
 GLOBAL_LIST_INIT(tool_aspects_blacklist, list(UPGRADE_COLOR, UPGRADE_ITEMFLAGPLUS, UPGRADE_CELLPLUS, UPGRADE_SHARP, UPGRADE_BULK))

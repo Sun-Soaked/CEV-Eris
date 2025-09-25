@@ -47,7 +47,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 		return 1 //Swinging calls its own attacks
 	return A.attackby(src, user, params)
 
-//Returns TRUE if attack is to be carried out, FALSE otherwise.
+/// The default method of invoking double tact. Returns TRUE if attack is to be carried out, FALSE otherwise.
 /obj/item/proc/double_tact(mob/user, atom/atom_target, adjacent)
 	if(atom_target.loc == user)//putting stuff in your backpack, or something else on your person?
 		return TRUE //regular bags won't even be able to hold items this big, but who knows
@@ -67,7 +67,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 		return TRUE
 
 
-//attempts to activate double tact state, can be called independently of double_tact.
+/// attempts to activate double tact state, can be called independently of double_tact.
 /obj/item/proc/start_tact(mob/user, target)
 	//is our object eligible for double tact?
 	if((w_class >= ITEM_SIZE_HUGE || (w_class == ITEM_SIZE_BULKY && !wielded)) && !abstract && !istype(src, /obj/item/gun) && !no_double_tact)
@@ -81,7 +81,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 			addtimer(CALLBACK(src, PROC_REF(end_tact), user, target, FALSE), 10 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
 		return
 
-//kills an active tact state, if active
+/// if a double_tact item is raised, lowers it.
 /obj/item/proc/end_tact(mob/user, target, combo)
 	if(user && ready)
 		ready = FALSE
