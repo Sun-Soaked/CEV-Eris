@@ -67,7 +67,7 @@
 			else
 				output += "<p>\[<a href='byond://?src=[REF(src)];showpoll=1'>Show Player Polls</A>\]</p>"
 
-	if (src.client.holder)
+	if (src?.client?.holder)
 		output += "<hr>"
 		output += "<div align='center'>[span_bold("Admin Quick Verbs")]"
 		if (SSticker.state <= GAME_STATE_PREGAME)
@@ -80,8 +80,8 @@
 
 	output += "</div>"
 
-	if (src.client.holder)
-		panel = new(src, "Welcome","Welcome", 240, 340, src)
+	if (src?.client?.holder)
+		panel = new(src, "Welcome","Welcome", 240, 360, src)
 	else
 		panel = new(src, "Welcome","Welcome", 220, 280, src)
 
@@ -249,23 +249,23 @@
 				log_text_poll_reply(poll_id, reply_text)
 		return
 
-	if (!src.client.holder)
+	if (!client || !client.holder)
 		return
 
 	if (href_list["startnow"])
-		src.client.holder.startnow()
+		client.holder.startnow()
 		return
 
 	if (href_list["endround"])
-		src.client.holder.end_round()
+		client.holder.end_round()
 		return
 
 	if (href_list["restart"])
-		src.client.holder.restart()
+		client.holder.restart()
 		return
 
 	if (href_list["runtimes"])
-		src.client.view_runtimes()
+		client.view_runtimes()
 		return
 
 
@@ -348,7 +348,7 @@
 
 	var/dat = ""
 	dat += "<b>Welcome, [name].<br></b>"
-	dat += "Round Duration: [gameTimestamp()]<br>"
+	dat += "Round Duration: <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B><BR>"
 
 	if(evacuation_controller.has_evacuated()) //In case Nanotrasen decides reposess CentCom's shuttles.
 		dat += "<font color='red'><b>The vessel has been evacuated.</b></font><br>"
