@@ -309,7 +309,7 @@
 		accessories += logo
 		logo.has_suit = src
 		loc = src
-		switch(logo_type) // All of the following names associated with some group of people, thus capitalized 
+		switch(logo_type) // All of the following names associated with some group of people, thus capitalized
 			if("punk_over_valentinos")
 				name = "Valentinos jacket"
 			if("punk_over_samurai")
@@ -547,6 +547,65 @@
 	pockets.max_w_class = ITEM_SIZE_SMALL
 	pockets.max_storage_space = 6
 
+/obj/item/clothing/suit/storage/scavengerarmor/artwork
+	name = "\improper Artisan's Curaiss"
+	desc = "A handsome set of plate, forged from scavenged materials and imagination by a creative soul."
+	icon_state = "scav_armor"
+	item_state = "scav_armor"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	siemens_coefficient = 0.9
+	spawn_blacklisted = TRUE
+	price_tag = 500
+	//style = STYLE_LOW//functionally "stylish" but it has to be this for balancing purposes
+
+/obj/item/clothing/suit/storage/scavengerarmor/artwork/New()
+	..()
+	//setup pockets
+	pockets.max_w_class = ITEM_SIZE_SMALL
+	var/pocket_num = rand(0,3)
+	if(pocket_num)
+		pockets.storage_slots = pocket_num
+
+	armor_passes = 10
+	for(var/i in 1 to stats_amt)
+		var/stat = pick(ALL_STATS)
+		oddity_stats[stat] = min(MAX_STAT_VALUE, oddity_stats[stat]+rand(1,2))
+
+	var/list/new_armor = list(
+		melee = (5 + rand(0, 15)),
+		bullet = (5 + rand(0, 15)),
+		energy = (5 + rand(0, 15)),
+		bomb = (15 + rand(0, 15)),
+		bio = (0 + rand(0, 15)),
+		rad = (0 + rand(0, 15)),
+	)
+	armor = getArmor(arglist(new_armor))
+
+
+	price_tag += rand(500, 1250)
+
+
+
+	//var/dice = "4d18"
+	//var/rander = rand(-25,15)//double chance to gimp stats, keeps things reasonable
+	//armor = armor.setRating(clamp(roll(dice) + rander, 0, 90), clamp(roll(dice) + rander, 0, 90), clamp(roll(dice) + rander, 0, 90), 45, clamp(roll(dice) + rander, 0, 90))
+
+
+/obj/item/clothing/head/armor/artwork
+	name = "\improper Artisan's Morion"
+	desc = "A crested metal helmet, sporting a festive dash of feathers and crazy glue. Your mileage may vary."
+	style = STYLE_LOW
+	price_tag = 500
+	spawn_blacklisted = TRUE
+	siemens_coefficient = 0.9
+	style_coverage = COVERS_HAIR
+
+/obj/item/clothing/head/armor/artwork/New()
+	..()
+	var/dice = "5d16"
+	var/rander = rand(-20,10)//slightly higher chance to gimp stats
+	armor = armor.setRating(roll(dice) + rander, roll(dice) + rander, roll(dice) + rander, roll(dice) + rander, 45, roll(dice) + rander)Expand commentComment on lines R474 to R476Code has comments. Press enter to view.
+	price_tag += rand(1000, 2500)
 
 /obj/item/clothing/suit/storage/triad
 	name = "triad jacket"//RUINER reference
