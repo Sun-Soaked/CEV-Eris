@@ -49,6 +49,7 @@
 	pixel_x = -10;
 	pixel_y = -6
 	},
+/obj/planter/hivemind_ancient,
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "l" = (
@@ -67,17 +68,19 @@
 	},
 /obj/machinery/door/blast/regular/open,
 /obj/item/trash/material/metal,
+/obj/planter/hivemind_ancient,
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "n" = (
-/turf/wall/low/with_glass/smart_plasma,
 /obj/machinery/door/blast/regular,
+/turf/wall/low/with_glass/smart_plasma,
 /area/deepmaint)
 "o" = (
-/mob/living/simple_animal/hostile/hivemind/mechiver{
+/mob/living/simple_animal/hostile/hivemind/mechiver/ancient{
 	malfunction_chance = 0;
 	name = "Test Subject Beta-149"
 	},
+/obj/planter/hivemind_ancient,
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "p" = (
@@ -126,7 +129,7 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "x" = (
-/mob/living/simple_animal/hostile/hivemind/stinger{
+/mob/living/simple_animal/hostile/hivemind/stinger/ancient{
 	malfunction_chance = 0
 	},
 /turf/floor/tiled/steel/techfloor_grid,
@@ -200,7 +203,7 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "L" = (
-/mob/living/simple_animal/hostile/hivemind/hiborg{
+/mob/living/simple_animal/hostile/hivemind/hiborg/ancient{
 	malfunction_chance = 0
 	},
 /turf/floor/tiled/steel/techfloor_grid,
@@ -230,17 +233,17 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "Q" = (
-/mob/living/simple_animal/hostile/hivemind/himan{
+/mob/living/simple_animal/hostile/hivemind/himan/ancient{
 	malfunction_chance = 0
 	},
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "R" = (
-/mob/living/simple_animal/hostile/hivemind/phaser,
+/mob/living/simple_animal/hostile/hivemind/phaser/ancient,
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "T" = (
-/mob/living/simple_animal/hostile/hivemind/lobber{
+/mob/living/simple_animal/hostile/hivemind/lobber/ancient{
 	malfunction_chance = 0
 	},
 /turf/floor/tiled/steel/techfloor_grid,

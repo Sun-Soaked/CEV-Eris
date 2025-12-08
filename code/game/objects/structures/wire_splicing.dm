@@ -93,6 +93,18 @@
 	if(!in_range(src, user))//To prevent TK and mech users from getting shocked
 		return FALSE
 	var/turf/T = get_turf(src)
+	var/area/ourarea = T.loc
+	//this area has magic inf power. Just do a shock directly
+	//also our shocking code is a mess like dang
+	if(!ourarea.requires_power)
+		var/body_part = using_hands ? (user.hand ? BP_L_ARM : BP_R_ARM) : pick( BP_L_LEG, BP_R_LEG)
+		var/shock_damage = rand(20, 40)
+		if(iscarbon(user))
+			var/mob/living/carbon/carbonuser = user
+			carbonuser.electrocute_act(shock_damage, src, def_zone = body_part)
+		if(user.stunned)
+			to_chat(user, span_warning("You got electrocuted by wire splicing!"))
+			return TRUE
 	var/obj/structure/cable/C = locate(/obj/structure/cable) in T
 	if(C)
 		if(electrocute_mob(user, C, src, hands = using_hands))
@@ -149,4 +161,3 @@
 				icon_state = "wire_splicing[messiness]"
 				to_chat(user, span_notice("You added one more wire."))
 				used_now = FALSE
-

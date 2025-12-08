@@ -324,3 +324,27 @@ var/list/global/cutoff_plant_icons = list()
 		else
 			extra_description += span_notice("It looks a bit dry.")
 	..(user, extra_description)
+
+///spawns a specific plant effect- for mapping purposes, since obj/effect/plants don't recieve their seed datum properly when manually spawned
+/obj/planter
+	name = "planter"
+	icon = 'icons/misc/landmarks.dmi'
+	icon_state = "nature-green"
+	///the seed datum of the plant to spawn
+	var/datum/seed/target_seed
+	///the physical plant we want to spawn
+	var/obj/effect/plant/target_plant
+
+// creates a plant and deletes itself
+/obj/planter/Initialize()
+	. = ..()
+
+	new target_plant(loc, new target_seed)
+	//var/obj/effect/plant/hivemind/ancient/wire = new(loc, new /datum/seed/wires)
+	//target_plant.Process()
+	return INITIALIZE_HINT_QDEL
+
+/obj/planter/hivemind_ancient
+	name = "ancient hive wire planter"
+	target_seed = /datum/seed/wires
+	target_plant = /obj/effect/plant/hivemind/ancient

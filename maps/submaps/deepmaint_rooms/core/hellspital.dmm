@@ -1,0 +1,1651 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/obj/structure/sign/chemistry,
+/turf/wall,
+/area/deepmaint)
+"am" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/medical/low_chance,
+/obj/spawner/firstaid/low_chance,
+/obj/spawner/oddities/low_chance,
+/obj/spawner/pack/rare,
+/obj/spawner/pack/rare,
+/obj/spawner/pack/rare,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/firstaid/low_chance,
+/obj/spawner/firstaid,
+/obj/spawner/firstaid,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"ap" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/weldingtool,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"aA" = (
+/obj/effect/damagedfloor,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"aE" = (
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"bb" = (
+/obj/machinery/door/firedoor,
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/effect/gibspawner/robot,
+/obj/machinery/door/blast/shutters,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"bt" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/machinery/bodyscanner,
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"cv" = (
+/turf/floor/tiled/white/brown_platform,
+/area/deepmaint)
+"cF" = (
+/obj/machinery/door/airlock/maintenance_medical{
+	welded = 1;
+	name = "Morgue Freezer"
+	},
+/obj/structure/barricade,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"cS" = (
+/obj/machinery/hivemind_machine/turret/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"cY" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/spray/sterilizine,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"db" = (
+/obj/machinery/door/airlock/glass_medical,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"dg" = (
+/turf/wall/reinforced,
+/area/deepmaint)
+"dk" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/beakers,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"dz" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical,
+/obj/spawner/firstaid/low_chance,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"dO" = (
+/obj/item/modular_computer/console/preset/medical/monitor{
+	dir = 4
+	},
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"eg" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = -4;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"eu" = (
+/obj/structure/barricade,
+/obj/machinery/door/airlock/medical{
+	welded = 1
+	},
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"eN" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/spawner/rations/low_chance,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"eO" = (
+/obj/structure/catwalk,
+/obj/spawner/traps,
+/turf/floor/plating/under,
+/area/deepmaint)
+"fa" = (
+/obj/item/material/shard,
+/obj/effect/decal/cleanable/dirt,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"fj" = (
+/obj/item/material/shard,
+/obj/machinery/door/blast/shutters,
+/turf/wall/low,
+/area/deepmaint)
+"gb" = (
+/obj/landmark/corpse/skeleton/maint,
+/obj/spawner/oddities/low_chance,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27
+	},
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/gun/normal/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"gj" = (
+/obj/structure/curtain/medical,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"gE" = (
+/obj/structure/catwalk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"hg" = (
+/obj/machinery/suit_storage_unit/medical,
+/obj/machinery/door/window/southleft,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"hD" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"hI" = (
+/obj/item/stack/material/wood,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"hT" = (
+/mob/living/simple_animal/hostile/hivemind/stinger/ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"hW" = (
+/obj/structure/closet/body_bag{
+	opened = 1
+	},
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"iu" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/floor/tiled/steel/techfloor_grid,
+/area/deepmaint)
+"iC" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"iW" = (
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"jk" = (
+/obj/structure/barrier/barbed_wire,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"jl" = (
+/obj/structure/closet/random/medsupply,
+/obj/machinery/door/window/southleft,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"jx" = (
+/mob/living/simple_animal/hostile/hivemind/lobber/ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"jH" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"kz" = (
+/obj/spawner/aberrant_organs/hive,
+/obj/spawner/aberrant_organs/normal,
+/obj/spawner/aberrant_organs/rare,
+/obj/structure/closet/crate/freezer,
+/obj/spawner/aberrant_organs/normal,
+/obj/item/organ/internal/vital/lungs,
+/obj/item/organ/internal/appendix,
+/obj/spawner/aberrant_organs/hive,
+/obj/spawner/aberrant_organs/hive,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"kU" = (
+/obj/machinery/hivemind_machine/babbler/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"le" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"lm" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/syringes{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"lT" = (
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/obj/machinery/hivemind_machine/supplicant/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/panels,
+/area/deepmaint)
+"mZ" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"nk" = (
+/obj/item/material/shard/shrapnel,
+/obj/effect/decal/cleanable/dirt,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"nm" = (
+/turf/floor/tiled/steel/techfloor_grid,
+/area/deepmaint)
+"nw" = (
+/obj/spawner/gun/shotgun,
+/obj/spawner/ammo/shotgun/low_chance,
+/obj/spawner/ammo/shotgun/low_chance,
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"nB" = (
+/turf/wall/low/with_glass/reinforced,
+/area/deepmaint)
+"nT" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/floor/tiled/white/panels,
+/area/deepmaint)
+"om" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/obj/structure/closet/body_bag{
+	opened = 1
+	},
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"ph" = (
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/obj/structure/closet/body_bag,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"pk" = (
+/obj/structure/table/standard,
+/obj/spawner/medical/low_chance,
+/obj/spawner/firstaid/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"pA" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"qe" = (
+/mob/living/simple_animal/hostile/hivemind/stinger/ancient,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"qp" = (
+/obj/item/material/shard,
+/obj/machinery/sleeper/sarcophagus/random{
+	dir = 4
+	},
+/turf/floor/tiled/white,
+/area/deepmaint)
+"qA" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/mob/living/simple_animal/hostile/hivemind/mechiver/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"qD" = (
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/surgery,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"qI" = (
+/obj/structure/medical_stand,
+/turf/floor/tiled/white/brown_platform,
+/area/deepmaint)
+"qJ" = (
+/obj/machinery/door/airlock/glass_medical,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"qO" = (
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"ra" = (
+/obj/structure/table/rack,
+/obj/spawner/science/low_chance,
+/obj/spawner/pack/tech_loot/low_chance,
+/obj/spawner/pack/tech_loot/low_chance,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/machinery/door/window/southright,
+/obj/item/tank/oxygen,
+/obj/spawner/toolbox/low_chance,
+/obj/spawner/oddities/low_chance,
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"rY" = (
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/obj/spawner/oddities/low_chance,
+/obj/effect/gibspawner/human,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"sn" = (
+/obj/item/tool/knife/butch,
+/obj/structure/table/standard,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"st" = (
+/obj/structure/curtain/medical,
+/obj/structure/curtain/medical,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"sz" = (
+/obj/item/ammo_casing/shotgun/scrap,
+/obj/effect/decal/cleanable/blood,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"sB" = (
+/obj/structure/medical_stand/anesthetic,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"sE" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"sO" = (
+/obj/spawner/scrap,
+/turf/floor/plating/under,
+/area/deepmaint)
+"tc" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical,
+/obj/spawner/medical,
+/obj/spawner/firstaid/low_chance,
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"tp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"tu" = (
+/obj/structure/table/standard,
+/obj/machinery/door/window/brigdoor/southleft{
+	name = "reception door";
+	req_access = list(5)
+	},
+/turf/floor/tiled/white,
+/area/deepmaint)
+"tN" = (
+/obj/item/ammo_casing/shotgun/scrap,
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"tP" = (
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"uP" = (
+/obj/effect/damagedfloor,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/graffiti/graffiti_skull{
+	pixel_y = 33;
+	pixel_z = 10;
+	pixel_x = -10
+	},
+/obj/effect/decal/cleanable/graffiti/graffiti_skull{
+	pixel_y = 33
+	},
+/obj/effect/decal/cleanable/graffiti/graffiti_skull{
+	pixel_y = 33;
+	pixel_z = 10;
+	pixel_x = 10
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"ve" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/plasma,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"vP" = (
+/obj/structure/curtain/medical,
+/obj/structure/bed/padded,
+/mob/living/simple_animal/hostile/hivemind/himan/ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"wg" = (
+/obj/effect/decal/cleanable/generic,
+/obj/structure/bed/chair/office,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"wB" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/spawner/rations/low_chance,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"wR" = (
+/obj/landmark/corpse/skeleton/maint,
+/obj/spawner/oddities/low_chance,
+/obj/structure/bed/roller,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/item/tool/weldingtool,
+/obj/spawner/ammo/lowcost/low_chance,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/gun/normal/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"xe" = (
+/obj/machinery/hivemind_machine/distractor/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"xf" = (
+/obj/structure/barricade,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"xj" = (
+/obj/item/material/shard/shrapnel,
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/standard,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"xX" = (
+/obj/machinery/sleeper/sarcophagus/random{
+	dir = 8
+	},
+/turf/floor/tiled/white/gray_platform,
+/area/deepmaint)
+"yf" = (
+/obj/effect/damagedfloor,
+/obj/item/trash/liquidfood,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"yp" = (
+/obj/structure/railing/grey,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-s"
+	},
+/obj/structure/catwalk,
+/obj/spawner/scrap,
+/turf/floor/plating/under,
+/area/deepmaint)
+"yu" = (
+/obj/spawner/aberrant_organs/hive,
+/obj/spawner/aberrant_organs/normal,
+/obj/spawner/aberrant_organs/rare,
+/obj/structure/closet/crate/freezer,
+/obj/spawner/aberrant_organs/normal,
+/obj/item/organ/internal/vital/heart,
+/obj/item/organ/internal/eyes,
+/obj/spawner/aberrant_organs/hive,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"yy" = (
+/obj/effect/decal/cleanable/generic,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"yK" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical,
+/obj/spawner/medical_lowcost,
+/obj/machinery/door/window/northleft,
+/obj/spawner/medical_lowcost,
+/obj/spawner/medical,
+/obj/spawner/medical,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"yW" = (
+/obj/item/material/shard/shrapnel,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/vending/wallmed/lobby{
+	pixel_y = 28
+	},
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"zc" = (
+/obj/effect/damagedfloor/fire,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/item/trash/cheesie,
+/turf/floor/plating/under,
+/area/deepmaint)
+"zd" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/trash/cigbutt,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"zh" = (
+/obj/item/material/shard,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"zq" = (
+/obj/structure/closet/secure_closet/anesthetics,
+/turf/floor/tiled/white/brown_platform,
+/area/deepmaint)
+"Ai" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical,
+/obj/spawner/firstaid/low_chance,
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Aj" = (
+/turf/floor/tiled/white,
+/area/deepmaint)
+"AH" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/medical,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Bg" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/floor/tiled/white/panels,
+/area/deepmaint)
+"Bh" = (
+/obj/structure/barricade,
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 2
+	},
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Bm" = (
+/obj/structure/table/glass,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"BR" = (
+/obj/item/stack/material/wood/random,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Cj" = (
+/obj/structure/table/glass,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/turf/floor/tiled/white/brown_platform,
+/area/deepmaint)
+"Cu" = (
+/obj/structure/barrier/barbed_wire,
+/turf/floor/tiled/white/brown_platform,
+/area/deepmaint)
+"CM" = (
+/obj/effect/damagedfloor,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Du" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/dirt,
+/obj/spawner/pack/gun_adjacent_loot,
+/obj/spawner/gun_parts/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/ammo,
+/obj/spawner/ammo,
+/obj/spawner/ammo,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Ep" = (
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"EQ" = (
+/obj/item/trash/material/metal,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"EX" = (
+/obj/structure/table/standard,
+/obj/spawner/pack/tech_loot/low_chance,
+/obj/spawner/pack/tech_loot/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/firstaid/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"FC" = (
+/obj/effect/gibspawner/human,
+/obj/item/ammo_casing/shotgun/scrap,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"GT" = (
+/obj/structure/catwalk,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Hv" = (
+/turf/wall,
+/area/deepmaint)
+"HO" = (
+/obj/item/reagent_containers/blood/AMinus{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/blood/APlus{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/blood/empty{
+	pixel_x = 1;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/blood/empty{
+	pixel_x = 1;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/blood/BMinus{
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/blood/BPlus{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/blood/OMinus{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/reagent_containers/blood/OPlus{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/obj/structure/table/rack/shelf,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"HR" = (
+/obj/structure/sign/department/medbay,
+/turf/wall,
+/area/deepmaint)
+"HS" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/beaker,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"IC" = (
+/obj/structure/bed/roller,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/tool/scalpel,
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"IO" = (
+/obj/machinery/hivemind_machine/turret/ancient,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/panels,
+/area/deepmaint)
+"Ji" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced,
+/obj/item/paper/crumpled,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Jk" = (
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Jx" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = -6;
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = -4;
+	pixel_y = 10
+	},
+/turf/floor/tiled/white,
+/area/deepmaint)
+"JD" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/spawner/scrap,
+/turf/floor/plating/under,
+/area/deepmaint)
+"JS" = (
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_platform,
+/area/deepmaint)
+"Ke" = (
+/obj/planter/hivemind_ancient,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Kr" = (
+/obj/machinery/hivemind_machine/screamer/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/panels,
+/area/deepmaint)
+"KR" = (
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Lu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/landmark/corpse/skeleton/maint,
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"LH" = (
+/obj/spawner/junk,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"LL" = (
+/obj/structure/sign/biohazard,
+/turf/wall,
+/area/deepmaint)
+"Mu" = (
+/obj/structure/sign/biohazard,
+/turf/wall/reinforced,
+/area/deepmaint)
+"My" = (
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"MV" = (
+/obj/effect/damagedfloor/fire,
+/obj/item/trash/chips,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Nd" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/effect/decal/cleanable/blood,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Nw" = (
+/obj/structure/table/standard,
+/obj/spawner/medical,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical,
+/obj/spawner/medical/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Nz" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"NO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Ob" = (
+/obj/machinery/body_scanconsole,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"OC" = (
+/obj/effect/damagedfloor,
+/obj/landmark/corpse/skeleton/maint,
+/obj/effect/gibspawner/robot,
+/obj/spawner/oddities/low_chance,
+/obj/spawner/pack/gun_loot,
+/obj/spawner/ammo/lowcost/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/gun/normal,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"OO" = (
+/turf/wall/low/with_glass/smart,
+/area/deepmaint)
+"OR" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"OT" = (
+/obj/structure/catwalk,
+/obj/structure/catwalk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"OV" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/firstaid/low_chance,
+/obj/spawner/firstaid,
+/obj/spawner/medical_lowcost,
+/obj/spawner/medical_lowcost,
+/obj/machinery/door/window/southright,
+/obj/spawner/medical_lowcost,
+/obj/spawner/medical,
+/obj/spawner/medical,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"OW" = (
+/obj/effect/damagedfloor,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Pi" = (
+/obj/effect/damagedfloor,
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/graffiti/graffiti_skull{
+	pixel_y = 33
+	},
+/obj/effect/decal/cleanable/graffiti/graffiti_skull{
+	pixel_y = 33;
+	pixel_z = 10;
+	pixel_x = 10
+	},
+/obj/landmark/corpse/skeleton/maint,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/spawner/ammo/lowcost/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/gun/normal/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Pw" = (
+/obj/effect/decal/cleanable/blood,
+/obj/machinery/door/window/northleft,
+/obj/machinery/vending/organfridge_aberrant,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"PA" = (
+/obj/machinery/hivemind_machine/turret/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"PL" = (
+/obj/effect/decal/cleanable/generic,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"PZ" = (
+/obj/structure/table/standard,
+/obj/spawner/pack/gun_adjacent_loot/low_chance,
+/obj/spawner/ammo,
+/obj/spawner/ammo/low_chance,
+/obj/spawner/gun/normal/low_chance,
+/obj/spawner/gun/normal/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Qa" = (
+/obj/item/ammo_casing/shotgun/scrap,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Qh" = (
+/obj/effect/decal/cleanable/blood,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Qx" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced,
+/obj/spawner/pack/tech_loot/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Qz" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/pack/rare,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical,
+/obj/spawner/medical,
+/obj/spawner/firstaid/low_chance,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Rv" = (
+/obj/structure/closet/random/medsupply,
+/obj/machinery/door/window/northright,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"RC" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/machinery/photocopier,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"RR" = (
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Sa" = (
+/obj/effect/decal/cleanable/rubble,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Se" = (
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 2
+	},
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"SU" = (
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"SV" = (
+/mob/living/simple_animal/hostile/hivemind/phaser/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"SZ" = (
+/obj/effect/decal/cleanable/generic,
+/obj/effect/damagedfloor,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Td" = (
+/obj/machinery/chem_master,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Te" = (
+/obj/effect/floor_decal/fact_plaque/med2,
+/obj/item/paper/deepmaint_hellspital,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"To" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/turf/floor/tiled/white/gray_platform,
+/area/deepmaint)
+"Ty" = (
+/turf/floor/plating/under,
+/area/deepmaint)
+"Tz" = (
+/obj/machinery/sleeper/sarcophagus/random{
+	dir = 4
+	},
+/turf/floor/tiled/white/gray_platform,
+/area/deepmaint)
+"TI" = (
+/obj/item/material/shard,
+/obj/effect/decal/cleanable/dirt,
+/turf/floor/tiled/steel/techfloor_grid,
+/area/deepmaint)
+"Ua" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/structure/catwalk,
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Uz" = (
+/obj/machinery/door/blast/shutters,
+/turf/wall/low/with_glass/smart,
+/area/deepmaint)
+"UE" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Vi" = (
+/obj/effect/damagedfloor,
+/obj/spawner/exosuit/damaged,
+/obj/spawner/exosuit_equipment/low_chance,
+/obj/spawner/exosuit_equipment/low_chance,
+/obj/spawner/exosuit_equipment/low_chance,
+/obj/spawner/exosuit_equipment/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"Vn" = (
+/obj/structure/girder,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Vu" = (
+/obj/structure/table/standard,
+/obj/spawner/medical/low_chance,
+/obj/spawner/medical/low_chance,
+/obj/spawner/firstaid/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"VG" = (
+/obj/effect/damagedfloor,
+/obj/effect/gibspawner/robot,
+/obj/structure/table/standard,
+/obj/spawner/firstaid/low_chance,
+/obj/spawner/firstaid,
+/obj/spawner/medical/low_chance,
+/turf/floor/tiled/white,
+/area/deepmaint)
+"VN" = (
+/obj/structure/catwalk,
+/obj/spawner/junk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"WO" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Xy" = (
+/mob/living/simple_animal/hostile/hivemind/lobber/ancient,
+/obj/planter/hivemind_ancient,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"XX" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/trash/liquidfood,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Yc" = (
+/obj/structure/barricade,
+/obj/item/stack/material/wood,
+/obj/spawner/oddities/low_chance,
+/turf/floor/tiled/white/cargo,
+/area/deepmaint)
+"Yv" = (
+/obj/machinery/optable,
+/obj/effect/gibspawner/human,
+/turf/floor/tiled/white/brown_perforated,
+/area/deepmaint)
+"Yz" = (
+/obj/structure/table/rack,
+/obj/spawner/science/low_chance,
+/obj/spawner/pack/tech_loot/low_chance,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/effect/decal/cleanable/blood,
+/obj/spawner/oddities/low_chance,
+/obj/machinery/door/window/northright,
+/obj/spawner/toolbox/low_chance,
+/turf/floor/tiled/white/techfloor_grid,
+/area/deepmaint)
+"Zs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/wall,
+/area/deepmaint)
+"ZA" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey,
+/obj/structure/railing/grey,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+
+(1,1,1) = {"
+SU
+SU
+gE
+SU
+eO
+SU
+LH
+SU
+SU
+LH
+SU
+SU
+LH
+SU
+gE
+SU
+SU
+gE
+gE
+SU
+SU
+"}
+(2,1,1) = {"
+SU
+dg
+dg
+dg
+Mu
+dg
+dg
+dg
+RR
+sO
+OW
+dg
+dg
+dg
+dg
+Mu
+dg
+dg
+dg
+dg
+gE
+"}
+(3,1,1) = {"
+gE
+dg
+qD
+Bm
+cY
+qp
+Bm
+dg
+Vn
+dg
+dg
+dg
+pk
+Tz
+Tz
+Tz
+EX
+cv
+vP
+Hv
+gE
+"}
+(4,1,1) = {"
+SU
+dg
+Cj
+My
+zh
+hT
+cv
+Hv
+Sa
+SZ
+RC
+Hv
+qI
+My
+My
+My
+My
+cv
+vP
+Hv
+SU
+"}
+(5,1,1) = {"
+gE
+dg
+cv
+SV
+sE
+st
+cv
+qJ
+aA
+Aj
+iW
+qJ
+cv
+My
+IC
+My
+My
+qI
+dg
+dg
+SU
+"}
+(6,1,1) = {"
+SU
+dg
+zq
+qO
+Yv
+gj
+cv
+Hv
+PL
+Nd
+bt
+Hv
+Jx
+xX
+Vu
+cv
+AH
+dg
+dg
+yp
+nm
+"}
+(7,1,1) = {"
+SU
+dg
+sB
+Jk
+Qa
+Aj
+Aj
+Hv
+KR
+Nz
+Ob
+Hv
+Hv
+OO
+Hv
+qJ
+Hv
+Hv
+le
+OR
+nm
+"}
+(8,1,1) = {"
+VN
+dg
+Hv
+Yc
+CM
+Hv
+Hv
+Hv
+aE
+Se
+Hv
+Hv
+Hv
+UE
+XX
+Qh
+iW
+LL
+iu
+nm
+nm
+"}
+(9,1,1) = {"
+gE
+dg
+hg
+rY
+BR
+Pw
+Hv
+JS
+JS
+cv
+cv
+db
+Aj
+KR
+mZ
+Aj
+iW
+Uz
+Lu
+tp
+Aj
+"}
+(10,1,1) = {"
+SU
+dg
+ra
+hT
+tN
+Yz
+Hv
+qO
+Qz
+Ai
+dO
+nB
+KR
+qe
+Ep
+eN
+Aj
+Uz
+iW
+iC
+Aj
+"}
+(11,1,1) = {"
+gE
+Mu
+Bg
+hI
+nw
+nT
+Hv
+Ke
+Xy
+qO
+My
+Ji
+yy
+Ep
+cS
+Ep
+aE
+bb
+EQ
+mZ
+Aj
+"}
+(12,1,1) = {"
+gE
+dg
+jl
+sz
+tP
+yK
+Hv
+qO
+tc
+dz
+wg
+tu
+Aj
+wB
+zd
+UE
+Aj
+Uz
+fa
+Aj
+Aj
+"}
+(13,1,1) = {"
+gE
+dg
+OV
+PA
+FC
+Rv
+Hv
+cv
+Cu
+Cu
+cv
+Qx
+Aj
+Aj
+Aj
+Aj
+Aj
+fj
+iW
+fa
+Aj
+"}
+(14,1,1) = {"
+SU
+dg
+dg
+Hv
+dg
+dg
+dg
+dg
+xf
+Bh
+Zs
+Hv
+Hv
+yW
+NO
+eN
+Aj
+HR
+TI
+iu
+nm
+"}
+(15,1,1) = {"
+gE
+dg
+kz
+hW
+Kr
+dg
+To
+Vi
+Du
+PZ
+OC
+Hv
+Hv
+OO
+xj
+Vn
+ah
+Hv
+JD
+ZA
+nm
+"}
+(16,1,1) = {"
+GT
+dg
+am
+KR
+pA
+dg
+uP
+iC
+MV
+Ty
+ap
+Hv
+sn
+PL
+EQ
+Aj
+Aj
+dg
+dg
+yp
+nm
+"}
+(17,1,1) = {"
+GT
+dg
+IO
+jH
+qA
+cF
+Ua
+wR
+Te
+yf
+Nw
+eu
+jk
+KR
+jx
+nk
+Aj
+Ep
+dg
+dg
+SU
+"}
+(18,1,1) = {"
+OT
+dg
+ph
+KR
+om
+dg
+Pi
+zc
+hD
+gb
+VG
+Hv
+xe
+tP
+ve
+cv
+lm
+qO
+kU
+Hv
+SU
+"}
+(19,1,1) = {"
+GT
+dg
+HO
+yu
+lT
+dg
+To
+dg
+To
+dg
+dg
+dg
+WO
+Td
+dk
+JS
+HS
+Xy
+eg
+Hv
+gE
+"}
+(20,1,1) = {"
+SU
+dg
+dg
+dg
+Mu
+dg
+dg
+dg
+dg
+dg
+RR
+dg
+dg
+dg
+dg
+Mu
+dg
+dg
+dg
+dg
+eO
+"}
+(21,1,1) = {"
+SU
+SU
+VN
+gE
+gE
+SU
+SU
+eO
+LH
+SU
+SU
+LH
+SU
+SU
+SU
+gE
+SU
+gE
+gE
+SU
+SU
+"}

@@ -32,6 +32,8 @@
 	var/obj/machinery/hivemind_machine/master
 	var/special_ability_cooldown = 0		//use ability_cooldown, don't touch this
 
+	//for long-term hivemind mobs that are found in deep in ruins/deepmaint, we don't want these to slowly kill themselves
+	var/ancient = FALSE
 
 /mob/living/simple_animal/hostile/hivemind/New()
 	. = ..()
@@ -76,7 +78,7 @@
 
 //It's second proc, result of our malfunction
 /mob/living/simple_animal/hostile/hivemind/proc/malfunction_result()
-	if(prob(malfunction_chance))
+	if(prob(malfunction_chance) && !ancient)
 		apply_damage(rand(5, 30), BURN)
 
 
@@ -126,7 +128,7 @@
 		if(B)
 			B.unbuckle_mob()
 
-	if(!hive_mind_ai)
+	if(!hive_mind_ai && !ancient)
 		if(prob(5))
 			death()
 			return FALSE
@@ -1124,3 +1126,18 @@
 	..()
 	gibs(loc, null, /obj/effect/gibspawner/human)
 	qdel(src)
+
+///generates out mapping versions of hivemind mobs without the "dies when core is missing" part bc. I didn't want to write it all out
+#define ANCIENT_HIVEMIND_HELPER(hivemob_type)		\
+	/mob/living/simple_animal/hostile/hivemind/##hivemob_type/ancient {		\
+		ancient = TRUE;														\
+	}
+
+ANCIENT_HIVEMIND_HELPER(stinger)
+ANCIENT_HIVEMIND_HELPER(treader)
+ANCIENT_HIVEMIND_HELPER(himan)
+ANCIENT_HIVEMIND_HELPER(hiborg)
+ANCIENT_HIVEMIND_HELPER(lobber)
+ANCIENT_HIVEMIND_HELPER(bomber)
+ANCIENT_HIVEMIND_HELPER(mechiver)
+ANCIENT_HIVEMIND_HELPER(phaser)

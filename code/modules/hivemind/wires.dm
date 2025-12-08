@@ -12,6 +12,8 @@
 	var/obj/machinery/hivemind_machine/node/master_node
 	var/list/wires_connections = list("0", "0", "0", "0")
 	var/my_area
+	//disables death from no node, for orphan hivemind bundles in deepmaint & other ruins
+	var/ancient = FALSE
 
 /obj/effect/plant/hivemind/New()
 	..()
@@ -131,10 +133,10 @@
 		if(door_on_my_tile && door_on_my_tile.density)
 			door_interaction(door_on_my_tile)
 	else
-		//slow vanishing after node death
-		health -= 10
-		alpha = 255 * health/max_health
-		check_health()
+		if(!ancient)//slow vanishing after node death
+			health -= 10
+			alpha = 255 * health/max_health
+			check_health()
 
 
 /obj/effect/plant/hivemind/is_mature()
@@ -398,6 +400,14 @@
 				die_off()
 				return
 
+//for deepmaint hivemind we don't want to wither, or interact with the normal spreading & infecting functions
+/obj/effect/plant/hivemind/ancient
+	name = "ancient wiring"
+	spread_chance = 0
+	ancient = TRUE
+
+/obj/effect/plant/hivemind/ancient/try_to_assimilate()
+	return
 
 
 #undef HIVE_FACTION

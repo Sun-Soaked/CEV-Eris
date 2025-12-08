@@ -1,0 +1,1879 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ao" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/catwalk,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"aO" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"aQ" = (
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"bd" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"bB" = (
+/obj/spawner/scrap/dense,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/light_construct,
+/turf/floor/plating/under,
+/area/deepmaint)
+"bQ" = (
+/obj/structure/table/rack,
+/obj/spawner/material/resources,
+/obj/spawner/material/resources/rare,
+/obj/spawner/material,
+/obj/spawner/material,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/material,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"cf" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"ck" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"cl" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"cs" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"cB" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"cZ" = (
+/obj/machinery/constructable_frame/machine_frame,
+/turf/floor/plating/under,
+/area/deepmaint)
+"dM" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"dP" = (
+/obj/spawner/tool,
+/turf/floor/plating/under,
+/area/deepmaint)
+"ee" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"et" = (
+/obj/spawner/scrap/sparse,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"eH" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"fo" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/lathe_disk/advanced/low_chance,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/powercell/large,
+/obj/spawner/tool_upgrade,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/pack/rare,
+/obj/spawner/toolbox,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/lathe_disk,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"fx" = (
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"fU" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"gw" = (
+/obj/spawner/junk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/junk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"gP" = (
+/obj/machinery/constructable_frame/machine_frame/vertical,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"he" = (
+/obj/item/stack/cable_coil/yellow,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"hh" = (
+/obj/spawner/junk,
+/obj/spawner/scrap/dense,
+/turf/floor/plating/under,
+/area/deepmaint)
+"iG" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"jv" = (
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"jO" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"kp" = (
+/obj/structure/table/rack,
+/obj/item/stack/cable_coil/yellow,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/turf/floor/plating/under,
+/area/deepmaint)
+"ks" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"kP" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"li" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"ll" = (
+/obj/item/stack/material/cardboard/random,
+/turf/floor/plating/under,
+/area/deepmaint)
+"mv" = (
+/obj/item/stack/material/plasteel/random,
+/turf/floor/plating/under,
+/area/deepmaint)
+"mY" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"nk" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"nA" = (
+/obj/spawner/junk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"oS" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"pm" = (
+/obj/landmark/corpse/skeleton/maint,
+/turf/floor/plating/under,
+/area/deepmaint)
+"ps" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/spawner/junk,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"pu" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"pA" = (
+/obj/structure/computerframe,
+/turf/floor/plating/under,
+/area/deepmaint)
+"pM" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"pO" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"qb" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"qV" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"rz" = (
+/obj/spawner/scrap/dense,
+/obj/machinery/light_construct,
+/turf/floor/plating/under,
+/area/deepmaint)
+"rF" = (
+/obj/structure/firedoor_assembly,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"tc" = (
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"ua" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/structure/cable,
+/turf/floor/plating/under,
+/area/deepmaint)
+"uh" = (
+/obj/structure/door_assembly,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"uJ" = (
+/turf/floor/tiled/techmaint,
+/area/deepmaint)
+"uO" = (
+/obj/spawner/junk,
+/obj/machinery/light_construct,
+/turf/floor/plating/under,
+/area/deepmaint)
+"uZ" = (
+/obj/spawner/scrap,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"vg" = (
+/obj/spawner/mob/roaches,
+/turf/floor/plating/under,
+/area/deepmaint)
+"vJ" = (
+/obj/structure/door_assembly,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"vK" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/closet/maintloot,
+/turf/floor/plating/under,
+/area/deepmaint)
+"vL" = (
+/obj/spawner/mob/roaches/cluster,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"wz" = (
+/obj/spawner/traps/wire_splicing,
+/turf/floor/plating/under,
+/area/deepmaint)
+"wG" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"wQ" = (
+/obj/structure/girder,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"xv" = (
+/obj/item/frame/apc,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"xK" = (
+/obj/spawner/mob/roaches,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"xZ" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/catwalk,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"ya" = (
+/obj/structure/table/rack,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/resources/rare/low_chance,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/obj/spawner/material/resources/rare,
+/obj/spawner/junk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"yO" = (
+/obj/machinery/constructable_frame/machine_frame/vertical,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"yT" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/powercell/small,
+/obj/spawner/tool_upgrade,
+/obj/spawner/tool_upgrade,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/pack/rare/low_chance,
+/obj/spawner/tool,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"yU" = (
+/obj/structure/table/rack,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/machinery/light_construct,
+/obj/spawner/tool_upgrade/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"zG" = (
+/obj/item/tool/weldingtool,
+/turf/floor/plating/under,
+/area/deepmaint)
+"zS" = (
+/obj/machinery/door/airlock/vault/bolted,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Aj" = (
+/obj/spawner/junk,
+/obj/spawner/scrap/sparse,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Ao" = (
+/obj/spawner/junk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Aw" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/spawner/closet/tech,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Br" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Bt" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/mob/roaches,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Bx" = (
+/obj/structure/table/rack,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/material/resources/rare/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/obj/spawner/material/resources/rare,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Dy" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Ea" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/powercell/small,
+/obj/spawner/tool/advanced,
+/obj/spawner/tool_upgrade,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/pack/rare/low_chance,
+/obj/spawner/lathe_disk/advanced,
+/obj/spawner/tool,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"Et" = (
+/obj/structure/table/rack,
+/obj/spawner/material/resources,
+/obj/spawner/material/resources/rare,
+/obj/spawner/material,
+/obj/spawner/material,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/material,
+/obj/spawner/material/resources,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"EF" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"EO" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"EW" = (
+/turf/floor/plating/under,
+/area/deepmaint)
+"Fj" = (
+/obj/item/frame/apc,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Fl" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Gj" = (
+/obj/spawner/junk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Gy" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"GG" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/mob/roaches,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"GY" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"He" = (
+/obj/structure/table/rack/shelf,
+/obj/spawner/lathe_disk/advanced/low_chance,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/pack/tech_loot,
+/obj/spawner/powercell/large,
+/obj/spawner/tool_upgrade,
+/obj/spawner/tool_upgrade,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/pack/rare/low_chance,
+/obj/spawner/tool/advanced,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/tool_upgrade/rare/low_chance,
+/obj/spawner/lathe_disk,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics/low_chance,
+/obj/spawner/electronics,
+/obj/spawner/electronics,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"Hy" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"HO" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/mob/roaches,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Ib" = (
+/obj/item/stack/cable_coil/yellow,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"In" = (
+/obj/landmark/corpse/skeleton/maint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Io" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Iu" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/mob/roaches,
+/turf/floor/plating/under,
+/area/deepmaint)
+"IB" = (
+/obj/structure/table/rack,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/resources/rare,
+/obj/spawner/junk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"IV" = (
+/obj/structure/girder,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"IW" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Jl" = (
+/turf/wall/reinforced,
+/area/deepmaint)
+"Jr" = (
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"JA" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"JH" = (
+/obj/structure/table/rack,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/resources/rare/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/building,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/material/resources/rare,
+/obj/spawner/junk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"JN" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/structure/cable{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"JO" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Kr" = (
+/obj/spawner/junk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Lz" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Mu" = (
+/obj/item/stack/cable_coil/yellow,
+/turf/floor/plating/under,
+/area/deepmaint)
+"MY" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"NH" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"NV" = (
+/obj/landmark/corpse/skeleton/maint,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"Pp" = (
+/obj/spawner/mob/roaches,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"PK" = (
+/obj/item/stack/material/plasteel/random,
+/obj/structure/table/rack,
+/obj/spawner/material/building,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/resources/rare,
+/obj/spawner/junk,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"PR" = (
+/obj/machinery/light_construct,
+/turf/floor/plating/under,
+/area/deepmaint)
+"PW" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Qn" = (
+/obj/structure/catwalk,
+/obj/spawner/traps/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"RM" = (
+/obj/structure/table/rack,
+/obj/spawner/material/resources,
+/obj/spawner/material/resources/rare,
+/obj/spawner/material,
+/obj/spawner/material,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/techpart/low_chance,
+/obj/spawner/tool_upgrade/low_chance,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/material,
+/obj/spawner/material,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"RN" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Sb" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/tool,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Si" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/spawner/mob/roaches,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"SK" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Td" = (
+/obj/item/stack/material/plastic/full,
+/obj/structure/table/rack,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building/low_chance,
+/obj/spawner/material/building,
+/obj/spawner/material/resources/low_chance,
+/obj/spawner/material/building,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Ua" = (
+/obj/spawner/scrap,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Um" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Vc" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Vl" = (
+/obj/spawner/pack/junk_machine,
+/turf/floor/tiled/dark/techfloor,
+/area/deepmaint)
+"Vn" = (
+/obj/structure/girder,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Vo" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/spawner/pack/junk_machine,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Vy" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"VF" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/closet/maintloot,
+/turf/floor/plating/under,
+/area/deepmaint)
+"VU" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"WH" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"WI" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+"Xe" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Xl" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/structure/catwalk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Xq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/spawner/mob/roaches,
+/obj/machinery/light_construct,
+/turf/floor/plating/under,
+/area/deepmaint)
+"XB" = (
+/obj/structure/door_assembly,
+/turf/floor/plating/under,
+/area/deepmaint)
+"XT" = (
+/obj/spawner/closet/tech,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Yo" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/spawner/traps/wire_splicing/low_chance,
+/obj/spawner/junk,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Yv" = (
+/turf/wall,
+/area/deepmaint)
+"YE" = (
+/obj/spawner/scrap/sparse,
+/turf/floor/plating/under,
+/area/deepmaint)
+"YG" = (
+/obj/spawner/scrap/dense,
+/turf/floor/plating/under,
+/area/deepmaint)
+"Zk" = (
+/obj/structure/girder,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/floor/plating/under,
+/area/deepmaint)
+
+(1,1,1) = {"
+uJ
+uJ
+uJ
+uJ
+EW
+uJ
+uJ
+EW
+EW
+uJ
+uJ
+uJ
+EW
+EW
+uJ
+uJ
+EW
+EW
+uJ
+uJ
+uJ
+"}
+(2,1,1) = {"
+uJ
+Yv
+aQ
+ks
+EW
+Ua
+EW
+EW
+aQ
+Vn
+EW
+EW
+Ua
+Jr
+EW
+EW
+EW
+EW
+Ua
+Yv
+uJ
+"}
+(3,1,1) = {"
+aQ
+Yv
+Io
+SK
+aQ
+Ua
+Ua
+Jr
+Ua
+Yv
+EW
+Ua
+YG
+Ua
+Jr
+EW
+aQ
+Ua
+YG
+Yv
+uJ
+"}
+(4,1,1) = {"
+uJ
+Yv
+cf
+Yv
+Yv
+Yv
+Yv
+XB
+Yv
+Yv
+Vn
+Yv
+Yv
+Vn
+qb
+wQ
+Yv
+Yv
+Yv
+Yv
+aQ
+"}
+(5,1,1) = {"
+uJ
+XB
+Iu
+Qn
+Bx
+Zk
+EW
+Pp
+PW
+Xe
+EW
+YE
+Yv
+VF
+Sb
+Jr
+YE
+Ao
+JN
+Yv
+EW
+"}
+(6,1,1) = {"
+EW
+Vn
+aO
+WI
+WH
+ps
+Hy
+JA
+Hy
+iG
+pu
+Jr
+Vn
+Ib
+jO
+vg
+EW
+VU
+Ua
+Yv
+uJ
+"}
+(7,1,1) = {"
+EW
+Yv
+Yv
+eH
+Jr
+Yv
+Yv
+Jr
+EW
+Yv
+Lz
+EW
+Yv
+pA
+PW
+MY
+EW
+Bt
+IB
+Vn
+uJ
+"}
+(8,1,1) = {"
+uJ
+Yv
+aQ
+uZ
+EW
+Yv
+Vo
+ee
+Ua
+Yv
+mY
+Xq
+Yv
+Vo
+In
+Gy
+Dy
+Um
+yU
+Yv
+aQ
+"}
+(9,1,1) = {"
+uJ
+Yv
+et
+cB
+qV
+Yv
+ya
+EF
+pm
+Yv
+IW
+pO
+Yv
+cZ
+Td
+xv
+fU
+dP
+ll
+Yv
+EW
+"}
+(10,1,1) = {"
+uJ
+Yv
+Br
+xK
+VU
+Vn
+Fj
+NH
+EO
+uh
+dM
+qV
+Yv
+Yv
+Yv
+Vn
+EF
+Yv
+Yv
+Yv
+uJ
+"}
+(11,1,1) = {"
+uJ
+Yv
+PW
+JO
+cl
+uh
+WH
+Gj
+vg
+Yv
+tc
+cs
+pO
+Mu
+Jr
+vg
+Fl
+EW
+YG
+Vn
+uJ
+"}
+(12,1,1) = {"
+EW
+oS
+WH
+xZ
+PR
+Yv
+pm
+Aj
+uO
+Yv
+YE
+RN
+Si
+GY
+rF
+bd
+Xl
+nk
+ao
+XB
+uJ
+"}
+(13,1,1) = {"
+EW
+Yv
+YG
+Vy
+XT
+Yv
+XT
+hh
+YE
+Yv
+Jl
+Jl
+zS
+Jl
+Yv
+Yv
+Yo
+Yv
+EF
+Yv
+EW
+"}
+(14,1,1) = {"
+aQ
+Yv
+Yv
+Yv
+Vn
+Yv
+Yv
+Yv
+Vn
+Jl
+RM
+vL
+NV
+Vl
+Yv
+PK
+ck
+HO
+vK
+Vn
+EW
+"}
+(15,1,1) = {"
+uJ
+Yv
+li
+nA
+pm
+YE
+EW
+Fj
+cZ
+Yv
+yT
+fx
+fx
+fo
+Jl
+EW
+Fl
+EF
+kp
+Yv
+aQ
+"}
+(16,1,1) = {"
+uJ
+Vn
+pA
+GG
+EW
+aQ
+vg
+he
+Ua
+Jl
+He
+pm
+vL
+Ea
+Jl
+YE
+pM
+kP
+ua
+Yv
+uJ
+"}
+(17,1,1) = {"
+uJ
+wz
+aQ
+PW
+wG
+Hy
+Vc
+nk
+Aw
+Jl
+Vl
+vL
+NV
+Vl
+Yv
+Jr
+Iu
+pm
+rz
+Yv
+EW
+"}
+(18,1,1) = {"
+EW
+Vn
+Ua
+aQ
+EF
+vg
+Jr
+Kr
+bB
+Yv
+Et
+bQ
+Vl
+Vl
+Jl
+li
+Um
+Jr
+YE
+Yv
+aQ
+"}
+(19,1,1) = {"
+EW
+Yv
+cZ
+yO
+gw
+jv
+JH
+YE
+gP
+Yv
+Yv
+Jl
+Jl
+Yv
+Yv
+Yv
+Vn
+XB
+Yv
+Yv
+uJ
+"}
+(20,1,1) = {"
+uJ
+Yv
+Yv
+Yv
+Yv
+vJ
+IV
+Yv
+Yv
+Yv
+Aj
+aQ
+pm
+mv
+Yv
+Ua
+EW
+Jr
+Ua
+Yv
+uJ
+"}
+(21,1,1) = {"
+uJ
+uJ
+aQ
+EW
+uJ
+uJ
+EW
+uJ
+uJ
+uJ
+aQ
+EW
+zG
+uJ
+EW
+uJ
+uJ
+uJ
+EW
+uJ
+uJ
+"}

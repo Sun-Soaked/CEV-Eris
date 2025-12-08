@@ -356,3 +356,15 @@
 	<font face=\"Times New Roman\"><i>James N</i></font>.
 	\[br\]"}
 
+/obj/item/paper/deepmaint_hellspital
+	name = "ripped note"
+	icon_state = "paper_words_crumpled"
+	info = {"
+	They cam e to med e  ing t  wounded \n
+	We loc ed in cry  room w sup lies\n
+	Run ing out f f  d \n
+	Sen  H lp \n
+	S  d He p \n
+	S nd H    \n
+	DO N T  PEN FR ZER RO M, V RY  AD INSIDE\n
+	\[br\]"}

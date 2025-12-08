@@ -29,6 +29,7 @@
 	var/time_until_regen = 0
 	var/obj/assimilated_machinery
 	var/obj/item/electronics/circuitboard/saved_circuit
+	var/ancient = FALSE
 
 /obj/machinery/hivemind_machine/Initialize()
 	. = ..()
@@ -60,7 +61,7 @@
 
 
 /obj/machinery/hivemind_machine/Process()
-	if(!hive_mind_ai || (wireweeds_required && !locate(/obj/effect/plant/hivemind) in loc))
+	if((!hive_mind_ai && !ancient) || (wireweeds_required && !locate(/obj/effect/plant/hivemind) in loc))
 		take_damage(5, on_damage_react = FALSE)
 
 	if(SDP)
@@ -723,7 +724,17 @@
 		target.adjust_hallucination(20, 20)
 	flick("[icon_state]-anim", src)
 
+///generates out mapping versions of hivemind structures without the "dies when core is missing" part
+#define ANCIENT_HIVESTRUCT_HELPER(hivestruct_type)	\
+	/obj/machinery/hivemind_machine/##hivestruct_type/ancient {		\
+		ancient = TRUE;												\
+	}
 
+ANCIENT_HIVESTRUCT_HELPER(distractor)
+ANCIENT_HIVESTRUCT_HELPER(supplicant)
+ANCIENT_HIVESTRUCT_HELPER(screamer)
+ANCIENT_HIVESTRUCT_HELPER(turret)
+ANCIENT_HIVESTRUCT_HELPER(babbler)
 
 
 
