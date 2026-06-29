@@ -119,6 +119,8 @@ GLOBAL_VAR_INIT(refid_filter, TYPEID(filter(type="angular_blur")))
 
 #define isProjectile(A) (istype(A, /obj/item/projectile))
 
+#define iseffect(A) (istype(A, /obj/effect))
+
 #define isidcard(I) (istype(I, /obj/item/card/id))
 
 // Assembly specific checks

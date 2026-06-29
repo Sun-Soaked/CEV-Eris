@@ -48,6 +48,7 @@
 	var/spawn_blacklisted = FALSE
 	/// Use path Ex:(bad_type = obj/item). Generally for abstract code objects, atoms with a set bad_type can never be selected by spawner. Examples include parent objects which should only exist within the code, or deployable embedded items.
 	var/bad_type
+
 /atom/movable/Del()
 	if(isnull(gc_destroyed) && loc)
 		testing("GC: -- [type] was deleted via del() rather than qdel() --")
@@ -119,6 +120,7 @@
 				AM.Uncrossed(src)
 			if(is_new_area && is_origin_turf)
 				origin.loc.Exited(src, destination)
+				remove_area_entropy(origin)
 
 	if(destination)
 		destination.Entered(src, origin, special_event)
@@ -128,6 +130,7 @@
 					AM.Crossed(src)
 			if(is_new_area && is_destination_turf)
 				destination.loc.Entered(src, origin)
+				add_area_entropy(destination)
 
 	SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, origin, loc)
 	if(origin && destination)

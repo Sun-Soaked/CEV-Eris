@@ -20,10 +20,10 @@
 	SSevent.change_parallax("bluespace_storm")
 
 /datum/event/bluespace_storm/announce()
-	priority_announce("The scanners have detected a bluespace storm near the ship. Bluespace distortions are likely to happen while it lasts.", "Bluespace Storm")
+	priority_announce("The scanners have detected a buildup of bluespace energies near the ship. Spontaneous bluespace distortions are likely to happen while it lasts, concentrated in areas with existing bluespace entropy.", "Bluespace Storm")
 
 /datum/event/bluespace_storm/end()
-	priority_announce("The bluespace storm has ended.", "Bluespace Storm")
+	priority_announce("The storm of energy has ended.", "Bluespace Storm")
 	SSevent.change_parallax(GLOB.random_parallax)
 
 /datum/event/bluespace_storm/tick()
@@ -220,7 +220,7 @@
 	SSevent.change_parallax("graveyard")
 
 /datum/event/graveyard/announce()
-	priority_announce("Drifting wrecks of a space station have been detected near the ship. Telecommunication systems are not responsible for any strain on the crew's psychological wellbeing.", "Space Graveyard")
+	priority_announce("Drifting debris originating from wrecked vessels has been detected near the ship. Telecommunication systems are not responsible for any strain on the crew's psychological wellbeing.", "Space Graveyard")
 
 /datum/event/graveyard/tick()
 	if(!(activeFor % 50))		// Every 50th tick

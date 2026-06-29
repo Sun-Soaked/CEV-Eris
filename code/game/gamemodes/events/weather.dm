@@ -120,11 +120,11 @@
 		N.color = weather_color
 		N.alpha = 128
 		switch(stage)
-			if(STARTUP_STAGE)
+			if(STARTUP_STAGE && telegraph_overlay)
 				N.icon_state = telegraph_overlay
-			if(MAIN_STAGE)
+			if(MAIN_STAGE && weather_overlay)
 				N.icon_state = weather_overlay
-			if(WIND_DOWN_STAGE)
+			if(WIND_DOWN_STAGE && end_overlay)
 				N.icon_state = end_overlay
 			if(END_STAGE)
 				N.color = null

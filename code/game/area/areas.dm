@@ -46,7 +46,17 @@
 	var/static_light = 0
 	var/static_environ
 
-	var/bluespace_entropy = 0
+	//remember to check bluespace entropy vars on atom
+	entropic_affect = ENTROPY_BASE_ACTIVITY
+	///base cooldown for entropic events run on this area
+	var/local_distort_interval = 15 MINUTES
+	///stored info on time event cd ends, made from world.time + event_interval
+	var/local_distort_cd
+
+	///a series of entropy instances associated with this area. Atoms will add and remove entropy instances instead of manipulating entropy_affect directly
+	var/list/entropy_sources = list()
+
+	//deprecate
 	var/bluespace_hazard_threshold = 100
 
 	var/uid
@@ -326,6 +336,10 @@
 var/list/mob/living/forced_ambiance_list = new
 
 /area/Entered(A)
+	if(!isatom(A))
+		return
+	var/atom/ouratom = A
+
 	if(!isliving(A))
 		return
 
@@ -486,3 +500,92 @@ var/list/mob/living/forced_ambiance_list = new
 	A.Entered(T, old_area)
 	for(var/atom/movable/AM in T)
 		A.Entered(AM, old_area) // Note: this will _not_ raise moved or entered events. If you change this, you must also change everything which uses them.
+
+///Returns a tag for distortion events related to the level of entropy on this area
+/area/proc/get_entropy_event_flag()
+	var/ourflag
+	if(bluespace_entropy >= ENTROPY_LEVEL_RADIANT)
+		ourflag = BLUESPACE_EVENT_RADIANT
+		return ourflag
+	if(bluespace_entropy >= ENTROPY_LEVEL_LUMINOUS)
+		ourflag = BLUESPACE_EVENT_LUMINOUS
+		return ourflag
+	if(bluespace_entropy >= ENTROPY_LEVEL_SHIMMERING)
+		ourflag = BLUESPACE_EVENT_GLOWING
+		return ourflag
+	if(bluespace_entropy >= ENTROPY_LEVEL_GLOWING)
+		ourflag = BLUESPACE_EVENT_GLOWING
+		return ourflag
+	if(bluespace_entropy >= ENTROPY_LEVEL_FAINT)
+		ourflag = BLUESPACE_EVENT_FAINT
+		return ourflag
+
+///Tries to trigger an anomalous bluespace event in this area.
+/area/proc/attempt_distortion(major_chance, event_flags, use_entropy = TRUE)
+	//can we distort this area?
+	if(flags & AREA_FLAG_ENTROPY_SHIELD)
+		return
+
+	if(use_entropy)
+		var/threshold_flag = get_entropy_event_flag()
+		if(prob(major_chance))
+			threshold_flag = threshold_flag * 2//major triggers events from the next threshold
+		event_flags |= threshold_flag
+	if(event_flags)
+		//find the event to use
+		var/datum/event/distortion/ourevent = SSentropy.get_distortion(event_flags)
+		if(ourevent)
+			ourevent.new(trigger_area = src)
+			ourevent.Initialize()
+
+///adds a stowed reference to an atom or just an unowned value to the entropy source list.
+/area/proc/add_entropy_instance(value, /atom/assoc)
+	if(!value)
+		log_runtime("add_entropy() missing required args")
+	var/refstring = "[value]"
+	if(assoc)
+		refstring = "[REF(assoc)]"
+	entropy_sources += refstring
+	entropy_sources[refstring] = value
+
+///removes 1 instance of a ref from the entropy effects list
+/area/proc/remove_entropy_instance(value, /atom/assoc)
+	var/refstring = "[value]"
+	if(assoc)
+		refstring = "[REF(assoc)]"
+
+	for(var/i in entropy_sources)
+		if(findtext(i, refstring, 1, 0) == 1)
+			entropy_sources.Remove(i)
+			break
+
+///assembles our current entropy tick from initial entropy + entropy values
+/area/proc/redraw_entropy()
+	//reset entropy
+	entropic_affect = initial(entropic_affect)
+	//fold all our entropy values into entropy activity
+	for(var/instance in entropy_sources)
+		var/numvalue = entropy_sources[instance]
+		//removes positive entropy growth if our area is entropy shielded, like by church protection or reality stabilizer
+		if(flags & AREA_FLAG_ENTROPY_SHIELD && numvalue > 0)
+			continue
+		entropic_affect = entropic_affect + numvalue
+
+
+//on areas, these procs just directly add entropy values to the area's bluespace entropy
+/area/add_area_entropy(area/target, amount)
+	if(flags & AREA_FLAG_ENTROPY_SHIELD)
+		return
+	bluespace_entropy += max(0, bluespace_entropy + amount)
+
+/area/remove_area_entropy(area/target, amount)
+	bluespace_entropy += max(0, bluespace_entropy - amount)
+
+//whatever girl. just use the wrong proc, see if I care
+/area/contaminate(amount)
+	add_area_entropy(amount)
+
+/area/can_contaminate()
+	if(flags & AREA_FLAG_ENTROPY_SHIELD)
+		return FALSE
+	return TRUE

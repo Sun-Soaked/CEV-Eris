@@ -70,6 +70,21 @@
 	/// Our light source. Don't fuck with this directly unless you have a good reason!
 	var/tmp/datum/light_source/light
 
+	///if true, atom does not clear bluespace entropy.
+	var/entropy_constant = FALSE
+	///value by which this atom affects entropy- either to the area it inhabits, or the base tick of an area.
+	var/entropic_affect
+
+	/**
+	 * A form of contamination which causes areas to experience generally unwanted bluespace activity.
+	 * On objects, mobs, and other atoms inside areas, this value contributes to area bluespace entropy
+	 * until it dissapates.
+	 *
+	 * On areas, this value is influenced by the contamination of atoms within,
+	 * and eventually results in 'distortions' if it's allowed to get high enough.
+	 */
+	var/bluespace_entropy = 0
+
 /atom/proc/update_icon()
 	return
 
@@ -151,6 +166,8 @@
 		for(var/reagent in preloaded_reagents)
 			reagents.add_reagent(reagent, preloaded_reagents[reagent])
 
+	if(entropy_affect && loc)
+		add_area_entropy(get_area(src))
 	return INITIALIZE_HINT_NORMAL
 
 /**
@@ -177,6 +194,7 @@
  * * clears the orbiters list
  * * clears overlays and priority overlays
  * * clears the light object
+ * * clears entropy from the area housing this atom
  */
 /atom/Destroy()
 	if(buckled_mob)
@@ -188,7 +206,8 @@
 		statverbs.Cut()
 	if(reagents)
 		QDEL_NULL(reagents)
-
+	if(entropy_affect)
+		remove_area_entropy(get_area(src))
 	SEND_SIGNAL(src, COMSIG_NULL_TARGET)
 	SEND_SIGNAL(src, COMSIG_NULL_SECONDARY_TARGET)
 
@@ -942,6 +961,41 @@
 	if(href_list["statpanel_item_click"])
 		var/mouseparams = list2params(paramslist)
 		usr_client.Click(src, loc, null, mouseparams)
+
+///General check for permeability of entropy-related effects
+/atom/proc/can_contaminate()
+	//bad types
+	if(iseffect(src) || isProjectile(src) || isturf(src))
+		return FALSE
+	//simulacrum inert objects aren't affected. neither are objects which are inherently unnatural(from simulacrum)
+	if(flags & (INERT|UNREAL))
+		return FALSE
+	//TODO: getcomponent(anti_magic) and component guards against bluespace or whatever
+	//coming in psionic rework or something
+	return TRUE
+
+///passes our entropic effect on to an area.
+/atom/proc/add_area_entropy(area/target)
+	if(!can_contaminate(target))
+		return
+	if(entropic_affect)
+		target.add_entropy_instance(entropic_affect, src)
+
+///removes our entropic effect from an area's entropy effects
+/atom/proc/remove_area_entropy(area/target)
+	if(!istype(target, /area))
+		return
+	if(entropic_affect)
+		target.remove_entropy_instance(entropic_affect, src)
+
+///Gives this atom short-term entropic contamination, passes processing on to the entropy subsystem
+///Required to process short term contamination properly for non-carbons. carbons do unique entropy processing in life()
+/atom/proc/contaminate(amount)
+	if(!check_entropy_defense)
+		return
+	bluespace_entropy += clamp(amount * (1 + chaos_level / 2), 0, MAX_ATOM_ENTROPY)
+	entropic_affect = ATOM_ENTROPY_MURMUR
+	SSentropy.contaminated += src
 
 /// Called after we wrench/unwrench this object
 /obj/proc/wrenched_change()

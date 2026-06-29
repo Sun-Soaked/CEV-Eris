@@ -274,3 +274,69 @@
 	tX = max(1, min(origin.x + 7 - tX, world.maxx))
 	tY = max(1, min(origin.y + 7 - tY, world.maxy))
 	return locate(tX, tY, tZ)
+
+
+/proc/get_perimeter(atom/center, radius)
+	if(radius < 1)
+		return
+	var/rounded_radius = round(radius)
+	var/x = center.x
+	var/y = center.y
+	var/z = center.z
+	var/t1 = rounded_radius/16
+	var/dx = rounded_radius
+	var/dy = 0
+	var/t2
+	var/list/perimeter = list()
+	while(dx >= dy)
+		perimeter += locate(x + dx, y + dy, z)
+		perimeter += locate(x - dx, y + dy, z)
+		perimeter += locate(x + dx, y - dy, z)
+		perimeter += locate(x - dx, y - dy, z)
+		perimeter += locate(x + dy, y + dx, z)
+		perimeter += locate(x - dy, y + dx, z)
+		perimeter += locate(x + dy, y - dx, z)
+		perimeter += locate(x - dy, y - dx, z)
+		dy += 1
+		t1 += dy
+		t2 = t1 - dx
+		if(t2 > 0)
+			t1 = t2
+			dx -= 1
+	return perimeter
+
+
+/proc/get_random_secure_turf_in_range(atom/origin, outer_range, inner_range)
+	origin = get_turf(origin)
+	if(!origin)
+		return
+	var/list/turfs = list()
+	var/turf/picked
+	for(var/turf/T in RANGE_TURFS(outer_range, origin))
+		if(!turf_clear(T)) continue
+		if(!T.is_solid_structure()) continue
+		if(T.x >= world.maxx-TRANSITIONEDGE || T.x <= TRANSITIONEDGE)	continue
+		if(T.y >= world.maxy-TRANSITIONEDGE || T.y <= TRANSITIONEDGE)	continue
+		if(!inner_range || get_dist(origin, T) >= inner_range)
+			turfs += T
+
+	if(turfs.len)
+		picked = pick(turfs)
+	else
+		picked = get_random_turf_in_range(origin, outer_range)
+	if(picked)
+		return picked
+
+/proc/get_random_turf_in_range(atom/origin, outer_range, inner_range)
+	origin = get_turf(origin)
+	if(!origin)
+		return
+	var/list/turfs = list()
+	for(var/turf/T in RANGE_TURFS(outer_range, origin))
+	//	if(!(T.z in GLOB.using_map.sealed_levels)) // Picking a turf outside the map edge isn't recommended
+		if(T.x >= world.maxx-TRANSITIONEDGE || T.x <= TRANSITIONEDGE)	continue
+		if(T.y >= world.maxy-TRANSITIONEDGE || T.y <= TRANSITIONEDGE)	continue
+		if(!inner_range || get_dist(origin, T) >= inner_range)
+			turfs += T
+	if(turfs.len)
+		return pick(turfs)

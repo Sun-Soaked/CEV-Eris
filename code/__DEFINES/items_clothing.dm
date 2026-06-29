@@ -70,6 +70,8 @@
 #define LOUD					0x80 	// Loud as hell tools
 #define HONKING					0x100 	// Honking tools
 #define MOVE_NOTIFY				0x200 	// Call entered_with_container() on this item when mob containing it moves
+#define INERT					0x400	// Unable to be distorted by the simulacrum.
+#define UNREAL					0x800	// An atom which is not strictly 'real' and only exists because of simulacrum activity
 
 //Flags for items (equipment)
 #define THICKMATERIAL              0x1  // Prevents syringes, parapens and hyposprays if equiped to slot_suit or slot_head.
