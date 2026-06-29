@@ -17,6 +17,11 @@
 	var/insight_reward	//Amount of isight for fulfilling the objectives.
 	var/is_negative = FALSE
 
+	///If set, breakdown can only occur if psychosis is at least this high
+	var/lowest_psychosis
+	///If set, Breakdown can only occur at or below this psychosis level
+	var/highest_psychosis
+
 	var/restore_sanity_pre
 	var/restore_sanity_post
 
@@ -29,7 +34,11 @@
 	return ..()
 
 /datum/breakdown/proc/can_occur()
-	return !!name && !!holder
+	if(!name && !holder)
+		return FALSE
+	if((lowest_psychosis && holder.psychosis <= lowest_psychyosis) || (highest_psychosis && holder.psychosis >= highest_psychosis))
+		return FALSE
+	return TRUE
 
 /datum/breakdown/proc/update()
 	if (!holder.owner)
@@ -80,7 +89,11 @@
 			if(restore_sanity_post)
 				holder.restoreLevel(restore_sanity_post)
 		else if(is_negative)
+			holder.shift_psychosis(1)
 			holder.changeLevel(-rand(20,30))
 	else if(restore_sanity_post)
 		holder.restoreLevel(restore_sanity_post)
+	if(holder.owner.stats.getPerk(PERK_SUN))//The Sun restores 25% of sanity post breakdown, regardless of outcome.
+		holder.restoreLevel(holder.max_level * 0.25)
+	holder.last_breakdown_end = world.time
 	qdel(src)

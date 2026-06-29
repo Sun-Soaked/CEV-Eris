@@ -24,6 +24,7 @@ export const TRAIT_ASSET = {
   Style: 'style.png',
   Desires: 'desire.png',
   Holy: 'kneeling.png',
+  Composure: 'eyeball.png',
 };
 
 export const TRAIT_NAME = {
@@ -32,4 +33,5 @@ export const TRAIT_NAME = {
   Style: 'Style',
   Desires: 'Desires',
   Holy: 'Righteous life',
+  Composure: 'Composure',
 };

@@ -404,6 +404,7 @@
 
 /atom/movable/screen/sanity/New()
 	..()
+	//sanity eye
 	ovrls["sanity0"] += new /image/no_recolor(icon = src.icon, icon_state = "sanity0")
 	ovrls["sanity1"] += new /image/no_recolor(icon = src.icon, icon_state = "sanity1")
 	ovrls["sanity2"] += new /image/no_recolor(icon = src.icon, icon_state = "sanity2")
@@ -411,6 +412,15 @@
 	ovrls["sanity4"] += new /image/no_recolor(icon = src.icon, icon_state = "sanity4")
 	ovrls["sanity5"] += new /image/no_recolor(icon = src.icon, icon_state = "sanity5")
 	ovrls["sanity6"] += new /image/no_recolor(icon = src.icon, icon_state = "sanity6")
+
+	//backing(psychosis)
+	ovrls["psychosis5"] += new /image/no_recolor(icon = src.icon, icon_state = "composure0")
+	ovrls["psychosis4"] += new /image/no_recolor(icon = src.icon, icon_state = "composure1")
+	ovrls["psychosis3"] += new /image/no_recolor(icon = src.icon, icon_state = "composure2")
+	ovrls["psychosis2"] += new /image/no_recolor(icon = src.icon, icon_state = "composure3")
+	ovrls["psychosis1"] += new /image/no_recolor(icon = src.icon, icon_state = "composure4")
+	ovrls["psychosis0"] += new /image/no_recolor(icon = src.icon, icon_state = "composure5")
+	ovrls["composure_glitchmajor"] += new /image/no_recolor(icon = src.icon, icon_state = "composure_glitchmajor")
 	update_icon()
 
 /atom/movable/screen/sanity/update_icon()
@@ -419,46 +429,101 @@
 		return
 
 	cut_overlays()
-	var/image/ovrl
+
+	//var/list/image/sanityoverlays
+	var/image/sanityovrl
 
 	if (H.sanity?.max_level > 0)
 		switch(H.sanity.level / H.sanity.max_level)
 			if(-INFINITY to 0)
-				overlays += ovrls["sanity6"]
-				return
+				sanityovrl = ovrls["sanity6"]
 			if(1 to INFINITY)
-				ovrl = ovrls["sanity0"]
+				sanityovrl = ovrls["sanity0"]
 			if(0.8 to 1)
-				ovrl = ovrls["sanity1"]
+				sanityovrl = ovrls["sanity1"]
 			if(0.6 to 0.8)
-				ovrl = ovrls["sanity2"]
+				sanityovrl = ovrls["sanity2"]
 			if(0.4 to 0.6)
-				ovrl = ovrls["sanity3"]
+				sanityovrl = ovrls["sanity3"]
 			if(0.2 to 0.4)
-				ovrl = ovrls["sanity4"]
+				sanityovrl = ovrls["sanity4"]
 			if(0 to 0.2)
-				ovrl = ovrls["sanity5"]
+				sanityovrl = ovrls["sanity5"]
 	else
-		overlays += ovrls["sanity6"]
-		return
+		sanityovrl = ovrls["sanity6"]
+	overlays += sanityovrl
 
-	switch(H.sanity.insight)
+	var/image/psychoovrl
+	if (H.sanity?.max_psychosis > 0)
+		switch(H.sanity.psychosis)
+			if(-INFINITY to 0)
+				psychoovrl = ovrls["psychosis0"]
+			if(1)
+				psychoovrl = ovrls["psychosis1"]
+			if(2)
+				psychoovrl = ovrls["psychosis2"]
+			if(3)
+				psychoovrl = ovrls["psychosis3"]
+			if(4)
+				psychoovrl = ovrls["psychosis4"]
+			if(5)
+				psychoovrl = ovrls["psychosis5"]
+	else
+		psychoovrl = ovrls["psychosis1"]
+	overlays += psychoovrl
+
+	var/ui_color = get_insightcolor()
+
+	if(ui_color)
+		psychoovrl.color = ui_color
+		if(H.sanity.level > 0)
+			sanityovrl.color = ui_color
+
+
+///gets the color of the sanity UI
+/atom/movable/screen/sanity/proc/get_insightcolor()
+	var/mob/living/carbon/human/parenthuman = parentmob
+	var/insightcolor
+	switch(parenthuman.sanity.insight)
 		if(-INFINITY to 20)
-			ovrl.color = "#a6a6a6"
+			insightcolor = "#a6a6a6"
 		if(20 to 40)
-			ovrl.color = "#09ed01"
+			insightcolor = "#09ed01"
 		if(40 to 60)
-			ovrl.color = "#ff7200"
+			insightcolor = "#ff7200"
 		if(60 to 80)
-			ovrl.color = "#0054ff"
+			insightcolor = "#0054ff"
 		if(80 to INFINITY)
-			ovrl.color = "#9040e0"
+			insightcolor = "#9040e0"
 
-	overlays += ovrl
+	//during breakdown sanity, always appears dark
+	if(parenthuman.sanity.level / parenthuman.sanity.max_level <= 0)
+		insightcolor = "#000000"
+
+	return insightcolor
+
+///janky flick() replacement needed cayuse flick() doesn't work on the weird temp mutable appearances used by this atom's overlays
+/atom/movable/screen/sanity/proc/glitchflick()
+	var/mob/living/carbon/human/parenthuman = parentmob
+	var/image/eye = ovrls["sanity0"]
+	var/image/glitchy = ovrls["composure_glitchmajor"]
+	var/ui_color = get_insightcolor()
+	if(ui_color)
+		glitchy.color = ui_color
+		if(parenthuman.sanity?.level > 0)
+			eye.color = ui_color
+
+	cut_overlays()
+
+	overlays += eye
+	overlays += glitchy
+
+	addtimer(CALLBACK(src, PROC_REF(update_icon)), 1 SECONDS)
 
 /atom/movable/screen/sanity/DEADelize()
 	cut_overlays()
 	overlays += ovrls["sanity0"]
+	overlays += ovrls["psychosis1"]
 
 /atom/movable/screen/sanity/Click()
 	if(!..())

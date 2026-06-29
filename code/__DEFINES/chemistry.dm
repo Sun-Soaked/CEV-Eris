@@ -60,6 +60,7 @@
 #define CE_BRAINHEAL        "neural tissue restoration"
 #define CE_EYEHEAL          "sensory organ regeneration stimulant"
 #define CE_GENEHEAL        "genecode restoration"
+#define CE_ANTIPSYCH	"antipsychotic" // Composure(long term sanity)
 
 // Chem effects for robotic/assisted organs
 #define CE_MECH_STABLE 		"cooling"

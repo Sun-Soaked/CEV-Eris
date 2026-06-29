@@ -43,6 +43,13 @@
 	else
 		if(perform(H, C, targets))
 			C.use_power(src.power)
+			if(power && H.stats.getPerk(PERK_DISCIPLE))
+				var/amount = istype(src, /datum/ritual/group) ? 20 : power / 1.5
+				amount = clamp(power * (cooldown / 500), 0, 40)
+				if(amount >= 1)
+					H.sanity?.changeLevel(amount)
+					to_chat(H, span_notice("You feel soothed by the familiar process of completing a ritual."))
+
 			to_chat(H, span_notice("[success_message]"))
 
 /datum/ritual/proc/fail(message, mob/living/carbon/human/H, obj/item/implant/core_implant/C, targets)

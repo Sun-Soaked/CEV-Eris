@@ -41,4 +41,11 @@
 
 	data["insight"] = insight
 
+
+	data["psychosis"] = list(
+		"value" = psychosis,
+		"min" = 0,
+		"max" = max_psychosis
+		)
+
 	return data

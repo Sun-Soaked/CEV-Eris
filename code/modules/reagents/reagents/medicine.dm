@@ -917,8 +917,8 @@
 /datum/reagent/medicine/suppressital/affect_blood/(mob/living/carbon/M)
 	if(!M.stats.getPerk(PERK_NJOY))
 		M.stats.addPerk(PERK_NJOY)
+	M.add_chemical_effect(CE_ANTIPSYCH, 1)
 
 /datum/reagent/medicine/suppressital/on_mob_delete(mob/living/M)
 	..()
 	M.stats.removePerk(PERK_NJOY)
-

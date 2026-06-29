@@ -332,3 +332,43 @@
 		/mob/living/carbon/human/proc/sm_codespeak_stop_local,
 		/mob/living/carbon/human/proc/sm_codespeak_run_local,
 		/mob/living/carbon/human/proc/sm_codespeak_idiot_local)
+
+///Paramed job perk
+/datum/perk/chariot
+	name = "The Chariot"
+	desc = "You've spent a lifetime training to arrive faster than death. Without an ambulance, your feet will have to do. \
+	You move slightly faster while running, and are slowed 25% less while dragging living creatures."
+
+///Acolyte job perk
+/datum/perk/disciple
+	name = "Disciple"
+	desc = "Your have spent years practicing the ways of humble prayer and self-discipline. You are less easily swayed than \
+	other folk, and life has a comforting rhythm. \
+	+15 to sanity cap. Casting litanies gives you sanity proportunate to their cost. Group litanies give more."
+
+/datum/perk/disciple/assign(mob/living/carbon/human/H)
+	if(..())
+		holder.sanity.max_level += 15
+
+/datum/perk/disciple/remove()
+	if(holder)
+		holder.sanity.max_level -= 15
+	..()
+
+///Advanced version of survivor for off-ship military personnel (foundation, serbs, erts?)
+/datum/perk/cataphract
+	name = "Cataphract"
+	desc = "You are a war hound. For coin or principle, you've walked long in the valley of death. \
+			The horrors of a battlefield are nothing but an old routine. \
+			Greatly reduces sanity damage taken from seeing people die, and reduces the amount of sanity dmg you can take from your environment."
+
+/datum/perk/cataphract/assign(mob/living/carbon/human/H)
+	if(..())
+		holder.sanity.death_view_multiplier *= 0.25
+		holder.sanity.environment_cap_coeff *= 1.5
+
+/datum/perk/cataphract/remove()
+	if(holder)
+		holder.sanity.death_view_multiplier *= 4
+		holder.sanity.environment_cap_coeff *= (2 / 3)//fractions ftw
+	..()

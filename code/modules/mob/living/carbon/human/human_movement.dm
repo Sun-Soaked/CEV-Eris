@@ -22,6 +22,8 @@
 				tally += 0.5
 	if(stats.getPerk(PERK_FAST_WALKER))
 		tally -= 0.5
+	if(stats.getPerk(PERK_CHARIOT))
+		tally -= 0.25
 
 	if(blocking)
 		if(blocking_item)

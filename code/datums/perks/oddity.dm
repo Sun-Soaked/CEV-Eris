@@ -507,3 +507,97 @@
 	if(holder)
 		holder.sanity.insight_gain_multiplier *= 2
 	..()
+
+/datum/perk/hangman
+	name = "The Hanged Man"
+	desc = "Beat me, kick me, but I'll keep on going. Nothing's worse than giving up. \
+	While going into shock from pain, you have a small chance to harden your resolve and recover, for just a brief moment."
+	///The default CD of this trait triggering
+	var/default_cooldown = 3 MINUTES
+	///World.Time Ref for the current CD of the perk's effect, if applicable
+	var/last_trigger
+	var/static/list/list_of_hangman_messages = list(
+		"I've been through worse.",
+		"I can't go down just yet.",
+		"Not yet.",
+		"I won't go quietly.",
+		"Don't count me out yet.",
+		"I'm not done.")
+
+/datum/perk/hangman/on_process()
+	if(!..())
+		return
+	if(holder && holder.shock_stage >= hard_crit_threshold * 0.80 && world.time > last_trigger + default_cooldown)
+		if(prob(0.1 * (1 + (stats.getStat(STAT_TGH) / 20))))//chance of it triggering when needed grows with TGH
+			to_chat(holder, span_notice("[pick(list_of_hangman_messages)]"))
+			shock_stage - 35//buys you just a little bit of time
+			holder.sanity?.restoreLevel(holder.sanity.max_level * 0.25)
+			last_trigger = world.time
+
+/datum/perk/sun
+	name = "The Sun"
+	desc = "When you're at rock bottom, there's only one way you can go. \
+	When you end a breakdown, you gain an additional 25% of your max sanity as sanity \
+	for the next 5 minutes, your passive composure gain from high sanity is increased."
+
+/datum/perk/star
+	name = "The Star"
+	desc = "Even when life tries to smother you, something deep inside you never stops burning. \
+	increases base positive breakdown chance by 5%. If you have 5% or lower positive breakdown chance, \
+	makes your positive breakdown chance at least 5 percent. "
+
+/datum/perk/star/assign(mob/living/carbon/human/H)
+	if(..())
+		holder.sanity.positive_prob += 5
+
+/datum/perk/star/remove()
+	if(holder)
+		holder.sanity.positive_prob -= 5
+	..()
+
+/datum/perk/instinct
+	name = "Raw Instinct"
+	desc = "After all I've been through, I'm worse than an animal. But it'll keep me alive. \
+	Reduces your max sanity by 20. Positive breakdown chance reduced by 10%. \
+	While having a breakdown, your mental stats are slightly decreased, but your TGH and ROB are increased."
+
+
+//TODO: When adding advanced psionics code, make this perk give bonus Mental Defense
+/datum/perk/ironclad
+	name = "Ironclad"
+	desc = "Your mind is an impenetrable fortress. \
+	Reduces the amount of sanity dmg which bypasses vigilance reduction by half."
+
+
+///WIP IDEAS BELOW: maybe bring back when we do developing random mental perks at low composure
+
+// /datum/perk/manic
+// 	name = "Manic"
+// 	desc = "With you, it's either so back or all over... either way, it's the most it's ever been.
+// 	You lose 50% more sanity while below 50 percent sanity, and gain sanity 50% faster while above that level.
+// 	When you lose or gain composure, you are twice as affected as normal."
+
+// /datum/perk/berzerker
+// 	name = "Berzerk"
+// 	desc = "When you taste blood, you lose your self-control completely and enter a state of blind, uninhibited rage.
+// 	When injured by or injuring another living being, your vision may go red as you enter a state of bloodlust.
+// 	While in this state, your TGH and ROB are dramatically increased, and you ignore the majority of pain until the effect ends.
+// 	You can't perform complex actions or use ranged attacks during this effect."
+
+// /datum/perk/antisocial
+// 	name = "Antisocial Personality Disorder"
+// 	desc = "Other people itch at you, and crowds make your skin crawl.
+// 	Without folk around to bother you, you feel more at ease with your surroundings.
+// 	You lose sanity when around other people, increasing the more are present in view. You take 50% less damage from the environment. "
+
+// ///very wip ideas for mental break perks
+// /datum/perk/madness
+// //constant hallucinations. more insight
+// /datum/perk/eviltwin
+// //spawns a linked bluespace twin antag that has all your items & stats & such and has an order to hunt you down
+// //killing it removes the perk and spawns some kind of treasure
+// /datum/perk/apostitis
+// //become a permanent source of bluespace entropy. antags/marshals may get an objective to kill
+// //gain a bunch of levels of psychic power(?)
+// /datum/perk/methuselah
+// //methuselah disorder. become really really fucking old. that's it. the perk that makes you old

@@ -51,8 +51,12 @@
 #define PERK_TECHNOMANCER /datum/perk/inspiration
 #define PERK_CLUB /datum/perk/job/club
 #define PERK_CHANNELING /datum/perk/channeling
+#define PERK_CHARIOT /datum/perk/chariot
 
 //cooldown perks
 #define PERK_COOLDOWN_REASON /datum/perk/cooldown/reason
 #define PERK_COOLDOWN_EXERTION /datum/perk/cooldown/exertion
 #define PERK_NJOY /datum/perk/njoy
+
+//perk-related defines
+#define PERK_SUN_BONUSTIME 5 MINUTES

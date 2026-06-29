@@ -21,7 +21,8 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 #define SANITY_DAMAGE_PSY(damage, vig) (damage * SANITY_DAMAGE_MOD * (2 - (vig) / STAT_LEVEL_MAX))
 
 // Damage received from seeing someone die
-#define SANITY_DAMAGE_DEATH(vig) (10 * SANITY_DAMAGE_MOD * (1 - (vig) / STAT_LEVEL_MAX))
+// Hard reduced to 25% after seeing (DEATHS_STOP_CARING) people die
+#define SANITY_DAMAGE_DEATH(vig, deathsseen) (35 * SANITY_DAMAGE_MOD * max((1 - deathsseen / DEATHS_STOP_CARING), 0.25) * (1.4 - (vig) / STAT_LEVEL_MAX))
 
 #define SANITY_GAIN_SMOKE 0.05 // A full cig restores 300 times that
 #define SANITY_GAIN_SAY 1
@@ -32,7 +33,7 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 #define SANITY_CHANGE_FADEOFF(level_change) (level_change * 0.75)
 
 #define INSIGHT_PASSIVE_GAIN 0.05
-#define INSIGHT_GAIN(level_change) (INSIGHT_PASSIVE_GAIN + level_change / 15)
+#define INSIGHT_GAIN(level_change) (INSIGHT_PASSIVE_GAIN + level_change / 12)
 
 #define INSIGHT_DESIRE_COUNT 2
 
@@ -45,6 +46,21 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 #define EAT_COOLDOWN_MESSAGE 15 SECONDS
 #define SANITY_MOB_DISTANCE_ACTIVATION 12
 
+///How much psychosis is reduced by each tick during high sanity
+#define PSYCHOSIS_LOSS_TICK 0.5
+
+///Above this percent of max sanity, psychosis dissapates
+#define PSYCHOSIS_LOSS_LEVEL 0.8
+
+///Number of living, breathing people you have to see die in agony to get slightly more numb to the inhumanity of it all
+#define DEATHS_STOP_CARING 4
+
+///At least this percent of sanity dmg will slip through vig defenses
+#define MIN_SANITY_DAMAGE 0.05
+///Min sanity damage if someone has the ironclad perk
+#define MIN_SANITY_DAMAGE_IRONCLAD 0.025
+
+
 /datum/sanity
 	var/flags
 	var/mob/living/carbon/human/owner
@@ -55,6 +71,8 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 	var/max_level = 100
 	var/level_change = 0
 
+	///The minimum percent of sanity loss allowed to creep through vig defenses
+	var/min_sanity_loss = MIN_SANITY_DAMAGE
 	var/insight
 	var/max_insight = INFINITY
 	var/insight_passive_gain_multiplier = 0.5
@@ -70,7 +88,9 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 
 	var/list/valid_inspirations = list(/obj/item/oddity)
 	var/list/desires = list()
-	var/positive_prob = 20
+
+	//explanation: TODO
+	var/positive_prob = 15
 	var/positive_prob_multiplier = 1
 	var/negative_prob = 30
 
@@ -81,17 +101,45 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 	var/breakdown_time = 0
 	var/spook_time = 0
 
+	///The number of human lives the holder mob has seen extinguished.
+	var/deaths_seen = 0
 	var/death_view_multiplier = 1
 
 	var/list/datum/breakdown/breakdowns = list()
+	//reference to the world.time when our last breakdown ended
+	var/last_breakdown_end
 
 	var/eat_time_message = 0
 
 	var/life_tick_modifier = 2	//How often is the onLife() triggered and by how much are the effects multiplied
 
+	//PSYCHOSIS SYSTEM: Way for sanity to gradually deteriorate/heal between breakdowns
+	//The higher psychosis grows, the greater the chance of a player getting negative breakdowns.
+	//Newer, worse negative breakdowns are unlocked at high psychosis
+	//Insight also scales based on Psychosis, growing the lower it gets.
+	//Low psychosis increases the chance of a positive breakdown.
+
+	///The max level a player's psychosis can reach.
+	var/max_psychosis = 5
+	///The starting psychosis level of a mob when they first get a sanity datum
+	var/starting_psychosis = 1
+	///The current level of psychosis of our mob
+	var/psychosis
+	///A scale that represents psychosis progression. if it reaches max, 1 psychosis is lost. If it falls to 0, 1 psychosis is gained.
+	var/psych_hp
+	///half this value is the 'default' value of psychosis it gets reset to
+	var/psych_maxhp = 200
+	///mult that changes all psych hp change(for perks)
+	var/psych_coeff = 1
+	///mult that changes psych hp regen from sanity(for perks)
+	var/psych_regen_coeff = 1
+
+
 /datum/sanity/New(mob/living/carbon/human/H)
 	owner = H
 	level = max_level
+	psychosis = starting_psychosis
+	psych_hp = psych_maxhp / 2
 	insight = rand(0, 30)
 	RegisterSignal(owner, COMSIG_MOB_LIFE, PROC_REF(onLife))
 	RegisterSignal(owner, COMSIG_HUMAN_SAY, PROC_REF(onSay))
@@ -147,6 +195,7 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 	changeLevel(max(affect  * life_tick_modifier, min((view_damage_threshold*environment_cap_coeff) - level, 0)))
 	handle_Insight()
 	handle_level()
+	handle_psychosis()
 	if(rest_timer_active)
 		if(rest_timer_time > 0)
 			rest_timer_time -= 2 SECONDS //since OnLife() procs every 2 seconds
@@ -194,7 +243,7 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 		for(var/mob/living/carbon/human/H in view(owner))
 			if(H.sanity.level > 60)
 				moralist_factor += 0.02
-	give_insight(INSIGHT_GAIN(level_change) * insight_passive_gain_multiplier * moralist_factor * style_factor * life_tick_modifier * GLOB.GLOBAL_INSIGHT_MOD)
+	give_insight(INSIGHT_GAIN(level_change) * insight_passive_gain_multiplier * moralist_factor * style_factor * life_tick_modifier * GLOB.GLOBAL_INSIGHT_MOD * (2 * ((max_composure + 1)/ (composure + 1))))
 	if(resting < max_resting && insight >= 100)
 		if(!rest_timer_active)//Prevent any exploits(timer is only active for one minute tops)
 			give_resting(1)
@@ -228,6 +277,40 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 
 		call(src, pickweight(level < 30 ? level < 20 ? effects_20 : effects_30 : effects_40))()
 
+///handles the movement of psychosis on each life() tick
+/datum/sanity/proc/handle_psychosis()
+	var/ouramount
+	if(level > (max_level * PSYCHOSIS_LOSS_LEVEL))//if sanity level is above psychosis loss threshold
+		ouramount += (PSYCHOSIS_LOSS_TICK * psych_regen_coeff)//composure slowly dissapates naturally
+		if(owner.stats.getPerk(PERK_SUN))//sun perk amplifies this effect for 5 minutes after a breakdown
+			if(last_breakdown_end + PERK_SUN_BONUSTIME <= world.time)
+				ouramount += PSYCHOSIS_LOSS_TICK * 0.5
+	else if (level < max_level / 2.5)//opposite if sanity is below a certain value
+		ouramount = max(1, ouramount - PSYCHOSIS_LOSS_TICK)
+
+	if(owner.chem_effects[CE_MIND])//old 'mind' chems provide slow psychosis healing(if they have a positive effect)
+		ouramount += (owner.chem_effects[CE_MIND] / 4)
+	if(owner.chem_effects[CE_ANTIPSYCH])//Njoy(and others given this trait) provide a strong psychosis removing effect
+		ouramount += owner.chem_effects[CE_ANTIPSYCH]
+
+	if(ouramount)
+		psych_hp += (ouramount * psych_coeff)
+
+	//handle actual psychosis level changes
+	if(psych_hp >= psych_maxhp)
+		shift_psychosis(-1)
+	else if(psych_hp <= 0)
+		shift_psychosis(1)
+
+///changes psychosis and visually glitches out the sanity ui to show players their psych changed
+/datum/sanity/proc/shift_psychosis(amount)
+	psychosis = clamp(0, max_psychosis, psychosis + amount)
+
+	var/atom/movable/screen/sanity/hud = owner.HUDneed["sanity"]
+	hud?.glitchflick()
+
+	//reset composure hp to default
+	psych_hp = (psych_maxhp / 2)
 
 /datum/sanity/proc/pick_desires()
 	desires.Cut()
@@ -364,7 +447,7 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 
 /datum/sanity/proc/onSeeDeath(mob/M)
 	if(ishuman(M))
-		var/penalty = -SANITY_DAMAGE_DEATH(owner.stats.getStat(STAT_VIG))
+		var/penalty = -SANITY_DAMAGE_DEATH(owner.stats.getStat(STAT_VIG), deaths_seen)
 		if(owner.stats.getPerk(PERK_NIHILIST))
 			var/effect_prob = rand(1, 100)
 			switch(effect_prob)
@@ -376,6 +459,9 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 					penalty *= -1
 				if(75 to 100)
 					penalty *= 0
+		deaths_seen++
+		if(deaths_seen == DEATHS_STOP_CARING && !owner.stats.getPerk(PERK_CATAPHRACT))//if we passed the threshold, tell owner
+			to_chat(owner, span_notice("You feel distressingly used to seeing people die."))
 		if(M.stats.getPerk(PERK_TERRIBLE_FATE) && prob(100-owner.stats.getStat(STAT_VIG)))
 			setLevel(0)
 		else
@@ -457,7 +543,7 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 	breakdown_time = world.time + SANITY_COOLDOWN_BREAKDOWN
 
 	if(owner.stats.getPerk(PERK_NJOY))
-		return // No breakdowns when you're Njoying life. TODO: once Psychosis is added, reduce to 50% chance
+		return // No breakdowns when you're Njoying life. TODO: once Psychosis is added, reduce to 50% chance // nuh uh
 
 	for(var/obj/item/device/mind_fryer/M in GLOB.active_mind_fryers)
 		if(get_turf(M) in view(get_turf(owner)))
@@ -467,10 +553,19 @@ GLOBAL_VAR_INIT(GLOBAL_INSIGHT_MOD, 1)
 		if(get_turf(S) in view(get_turf(owner)))
 			S.reg_break(owner)
 
-	var/list/possible_results
-	if((prob(positive_prob) && positive_prob_multiplier > 0 || positive_breakdown))
+	//0 1    5
+	//Give our composure mods to our breakdown type chances
+	var/adjust_pos_prob = positive_prob * ((max_psychosis - psychosis) / 2)
+	var/adjust_neg_prob = negative_prob * max(psychosis / 2, 0.25)
+
+	//Sun makes the positive breakdown chance at least 5 percent
+	if(owner.stats.getPerk(PERK_SUN))
+		adjust_pos_prob = max(adjust_pos_prob, 5)
+
+	var/list/possible_results //get the category of breakdowns we draw from
+	if((prob(adjust_pos_prob) && (positive_prob_multiplier > 0 || owner.stats.getPerk(PERK_SUN)) || positive_breakdown))
 		possible_results = subtypesof(/datum/breakdown/positive)
-	else if(prob(negative_prob))
+	else if(prob(adjust_neg_prob))
 		possible_results = subtypesof(/datum/breakdown/negative)
 	else
 		possible_results = subtypesof(/datum/breakdown/common)

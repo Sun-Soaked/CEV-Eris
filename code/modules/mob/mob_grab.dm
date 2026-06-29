@@ -392,6 +392,8 @@
 		slowdown *= 0.5
 	else if (assailant.mob_size < affecting.mob_size)
 		slowdown *= 1.5
+	if(assailant.stats.getPerk(PERK_CHARIOT))
+		slowdown *= 0.75
 
 /obj/item/grab/attack(mob/M, mob/living/user)
 	if(!affecting)
